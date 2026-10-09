@@ -1,0 +1,7 @@
+title: "Cybersecurity Research"
+description: "Cyber Threat Intelligence, Malware Analysis and Detection Engineering"
+url: "https://marktsec.github.io"
+baseurl: ""
+theme: minima
+plugins:
+  - jekyll-feed
