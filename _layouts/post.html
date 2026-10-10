@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="article-page">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/research/' | relative_url }}">← All research</a>
+    <p class="eyebrow">THREAT INTELLIGENCE / TECHNICAL ANALYSIS</p>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      {% if page.author %}<span>By {{ page.author | escape }}</span>{% endif %}
+      {% if page.categories.size > 0 %}<span class="meta-divider">·</span>{% for category in page.categories limit:3 %}<span class="tag">{{ category | replace: '-', ' ' }}</span>{% endfor %}{% endif %}
+    </div>
+    {% if page.description %}<p class="article-deck">{{ page.description | escape }}</p>{% elsif page.excerpt %}<p class="article-deck">{{ page.excerpt | strip_html | normalize_whitespace }}</p>{% endif %}
+  </header>
+  <div class="prose article-prose">
+    {{ content }}
+  </div>
+  <footer class="article-end">
+    <span class="end-mark" aria-hidden="true">◆</span>
+    <p>End of article</p>
+    <a class="text-link" href="{{ '/research/' | relative_url }}">Explore more research →</a>
+  </footer>
+</article>

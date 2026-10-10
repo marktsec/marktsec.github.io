@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="document-page">
+  <header class="document-header">
+    <p class="eyebrow">MARKTSEC / RESEARCH NOTES</p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="document-description">{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>
