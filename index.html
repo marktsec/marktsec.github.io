@@ -1,0 +1,72 @@
+---
+layout: home
+title: Cybersecurity Research
+description: Independent research into emerging threats, malware, attacker infrastructure, and defensive detection.
+---
+
+<section class="hero">
+  <p class="eyebrow"><span class="status-dot"></span> INDEPENDENT SECURITY RESEARCH</p>
+  <h1>Understanding threats.<br><span class="text-accent">Improving detection.</span></h1>
+  <p class="hero-copy">Technical research into ransomware operations, emerging malware, attacker infrastructure, and defensive detection strategies.</p>
+  <div class="hero-actions">
+    <a class="button button-primary" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">↗</span></a>
+    <a class="button button-secondary" href="{{ '/about/' | relative_url }}">About the researcher</a>
+  </div>
+  <div class="hero-meta">
+    <span>THREAT INTELLIGENCE</span><span>MALWARE ANALYSIS</span><span>DETECTION ENGINEERING</span>
+  </div>
+</section>
+
+<section class="section-block" id="research">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">AREAS OF FOCUS</p>
+      <h2>Research domains</h2>
+    </div>
+    <span class="section-index">01 / FOCUS</span>
+  </div>
+  <div class="focus-grid">
+    <article class="focus-card"><span class="card-number">01</span><div class="focus-icon">⌁</div><h3>Threat intelligence</h3><p>Campaign tracking, adversary behavior, infrastructure, and operational changes.</p></article>
+    <article class="focus-card"><span class="card-number">02</span><div class="focus-icon">⌘</div><h3>Malware analysis</h3><p>Technical analysis of malware families, loaders, stealers, and emerging techniques.</p></article>
+    <article class="focus-card"><span class="card-number">03</span><div class="focus-icon">◈</div><h3>Ransomware operations</h3><p>RaaS ecosystems, affiliate activity, tooling changes, and operational patterns.</p></article>
+    <article class="focus-card"><span class="card-number">04</span><div class="focus-icon">⌕</div><h3>Detection engineering</h3><p>Turning research findings into practical defensive ideas and detection opportunities.</p></article>
+  </div>
+</section>
+
+<section class="section-block">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">LATEST PUBLICATIONS</p>
+      <h2>Recent research</h2>
+    </div>
+    <a class="text-link" href="{{ '/research/' | relative_url }}">View all research <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="post-list">
+    {% assign recent_posts = site.posts | slice: 0, 4 %}
+    {% for post in recent_posts %}
+      <article class="post-card">
+        <div class="post-date">{{ post.date | date: "%b %d, %Y" }}</div>
+        <div class="post-card-main">
+          <div class="post-tags">
+            {% if post.categories.size > 0 %}
+              {% for category in post.categories limit:2 %}<span class="tag">{{ category | replace: '-', ' ' }}</span>{% endfor %}
+            {% else %}
+              <span class="tag">Threat research</span>
+            {% endif %}
+          </div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          {% if post.excerpt %}<p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>{% endif %}
+          <a class="read-link" href="{{ post.url | relative_url }}">Read research <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="post-arrow" aria-hidden="true">↗</span>
+      </article>
+    {% else %}
+      <p class="empty-state">New research will appear here as it is published.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="closing-panel">
+  <div><p class="eyebrow">RESEARCH NOTES, NOT NOISE</p><h2>From technical findings to defensive value.</h2><p>This blog documents campaign analysis, attacker techniques, and practical ideas for improving security detections.</p></div>
+  <a class="button button-secondary" href="{{ '/about/' | relative_url }}">More about this site <span aria-hidden="true">→</span></a>
+</section>
