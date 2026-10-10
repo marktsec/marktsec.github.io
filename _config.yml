@@ -3,5 +3,14 @@ description: "Cyber Threat Intelligence, Malware Analysis and Detection Engineer
 url: "https://marktsec.github.io"
 baseurl: ""
 theme: minima
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+minima:
+  skin: dark
+  show_excerpts: true
