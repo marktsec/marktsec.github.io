@@ -1,13 +1,4 @@
 ---
 layout: default
 ---
-<article class="document-page">
-  <header class="document-header">
-    <p class="eyebrow">MARKTSEC / RESEARCH NOTES</p>
-    <h1>{{ page.title | escape }}</h1>
-    {% if page.description %}<p class="document-description">{{ page.description | escape }}</p>{% endif %}
-  </header>
-  <div class="prose">
-    {{ content }}
-  </div>
-</article>
+<article class="gold-border rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">{{ content }}</article>
