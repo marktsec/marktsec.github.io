@@ -1,72 +1,42 @@
 ---
 layout: home
-title: Cybersecurity Research
-description: Independent research into emerging threats, malware, attacker infrastructure, and defensive detection.
+title: Home
+description: Independent cybersecurity and threat intelligence research by marktsec.
 ---
+<section class="relative rounded-2xl gold-border p-8 md:p-12 overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center space-x-3 px-3.5 py-1.5 rounded-full border border-horo-gold/40 bg-horo-gold/15 text-horo-gold text-xs font-mono"><span class="text-horo-ruby">◆</span><span class="tracking-wider font-semibold">THREAT INTELLIGENCE &amp; SECURITY RESEARCH</span></div>
+<h1 class="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">Researching threats with <span class="gold-gradient-text italic">precision</span></h1>
+<p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-2xl font-light">Technical research covering threat intelligence, ransomware operations, emerging malware, attacker infrastructure, and detection opportunities. Written and maintained by <span class="text-white font-medium">marktsec</span>.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-horo-gold/20">
+<div><div class="font-mono text-[10px] text-horo-gold/80 tracking-wider font-semibold">PRIMARY FOCUS</div><div class="font-serif text-2xl font-bold text-white mt-1">CTI</div></div>
+<div><div class="font-mono text-[10px] text-horo-gold/80 tracking-wider font-semibold">ANALYSIS</div><div class="font-serif text-2xl font-bold text-horo-goldLight mt-1">MALWARE</div></div>
+<div><div class="font-mono text-[10px] text-horo-gold/80 tracking-wider font-semibold">DEFENSIVE OUTPUT</div><div class="font-mono text-base font-bold text-emerald-400 mt-2">DETECTION</div></div>
+</div></div>
+<div class="lg:col-span-4 flex justify-center"><div class="relative w-64 h-64 rounded-full border-2 border-horo-gold/40 flex items-center justify-center bg-horo-950/80 p-4 shadow-[0_0_50px_rgba(212,175,55,0.2)] backdrop-blur-md">
+<div class="absolute inset-1 rounded-full border border-dashed border-horo-gold/30 animate-[spin_40s_linear_infinite]"></div><div class="absolute inset-5 rounded-full border border-horo-gold/50 animate-[spin_20s_linear_infinite_reverse]"></div>
+<svg class="absolute w-44 h-44 text-horo-gold/30 animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 4"/><circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width=".5"/><circle cx="50" cy="50" r="6" fill="#e11d48"/></svg>
+<div class="text-center z-10 bg-horo-950/90 p-4 rounded-full border border-horo-gold/40"><div class="font-mono text-xs text-horo-gold font-bold">CTI_2026</div><div class="font-mono text-[9px] text-slate-300 tracking-widest font-semibold">RESEARCH LAB</div><div class="text-[9px] font-mono text-emerald-400">TLP:CLEAR</div></div>
+</div></div></div></section>
 
-<section class="hero">
-  <p class="eyebrow"><span class="status-dot"></span> INDEPENDENT SECURITY RESEARCH</p>
-  <h1>Understanding threats.<br><span class="text-accent">Improving detection.</span></h1>
-  <p class="hero-copy">Technical research into ransomware operations, emerging malware, attacker infrastructure, and defensive detection strategies.</p>
-  <div class="hero-actions">
-    <a class="button button-primary" href="{{ '/research/' | relative_url }}">Explore research <span aria-hidden="true">↗</span></a>
-    <a class="button button-secondary" href="{{ '/about/' | relative_url }}">About the researcher</a>
-  </div>
-  <div class="hero-meta">
-    <span>THREAT INTELLIGENCE</span><span>MALWARE ANALYSIS</span><span>DETECTION ENGINEERING</span>
-  </div>
+<section class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-horo-gold/20 py-5">
+<div class="flex items-center space-x-3 overflow-x-auto pb-2 font-mono text-xs">
+<button data-filter="all" class="cat-btn active px-4 py-2 rounded-full border border-horo-gold bg-horo-gold/15 text-horo-gold font-semibold">All Research</button>
+<button data-filter="threat-intelligence" class="cat-btn px-4 py-2 rounded-full border border-white/10 bg-horo-900/60 text-slate-300">Threat Intelligence</button>
+<button data-filter="malware" class="cat-btn px-4 py-2 rounded-full border border-white/10 bg-horo-900/60 text-slate-300">Malware Analysis</button>
+<button data-filter="ransomware" class="cat-btn px-4 py-2 rounded-full border border-white/10 bg-horo-900/60 text-slate-300">Ransomware</button>
+<button data-filter="detection-engineering" class="cat-btn px-4 py-2 rounded-full border border-white/10 bg-horo-900/60 text-slate-300">Detection Engineering</button>
+</div><a href="{{ '/research/' | relative_url }}" class="font-mono text-xs text-horo-gold hover:underline whitespace-nowrap">VIEW ARCHIVE →</a></section>
+
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{% assign recent_posts = site.posts | slice: 0, 6 %}{% for post in recent_posts %}{% assign cats = post.categories | join: ' ' | downcase %}
+<article class="article-card gold-border rounded-xl p-6 flex flex-col justify-between group" data-categories="{{ cats }}">
+<div class="space-y-4"><div class="flex items-center justify-between font-mono text-xs"><span class="text-horo-gold font-semibold">◆ RESEARCH</span><span class="text-slate-400">{{ post.date | date: "%b %Y" | upcase }}</span></div>
+<h2 class="font-serif text-xl font-bold text-white group-hover:text-horo-gold transition"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+{% if post.excerpt %}<p class="text-slate-300 text-xs leading-relaxed">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>{% endif %}</div>
+<div class="pt-6 mt-6 border-t border-horo-gold/20 flex items-center justify-between font-mono text-xs"><div>{% for tag in post.tags limit:2 %}<span class="text-slate-400 mr-2">#{{ tag }}</span>{% endfor %}</div><a href="{{ post.url | relative_url }}" class="text-horo-gold font-semibold">Read Research →</a></div>
+</article>{% endfor %}
 </section>
 
-<section class="section-block" id="research">
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">AREAS OF FOCUS</p>
-      <h2>Research domains</h2>
-    </div>
-    <span class="section-index">01 / FOCUS</span>
-  </div>
-  <div class="focus-grid">
-    <article class="focus-card"><span class="card-number">01</span><div class="focus-icon">⌁</div><h3>Threat intelligence</h3><p>Campaign tracking, adversary behavior, infrastructure, and operational changes.</p></article>
-    <article class="focus-card"><span class="card-number">02</span><div class="focus-icon">⌘</div><h3>Malware analysis</h3><p>Technical analysis of malware families, loaders, stealers, and emerging techniques.</p></article>
-    <article class="focus-card"><span class="card-number">03</span><div class="focus-icon">◈</div><h3>Ransomware operations</h3><p>RaaS ecosystems, affiliate activity, tooling changes, and operational patterns.</p></article>
-    <article class="focus-card"><span class="card-number">04</span><div class="focus-icon">⌕</div><h3>Detection engineering</h3><p>Turning research findings into practical defensive ideas and detection opportunities.</p></article>
-  </div>
-</section>
-
-<section class="section-block">
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">LATEST PUBLICATIONS</p>
-      <h2>Recent research</h2>
-    </div>
-    <a class="text-link" href="{{ '/research/' | relative_url }}">View all research <span aria-hidden="true">→</span></a>
-  </div>
-  <div class="post-list">
-    {% assign recent_posts = site.posts | slice: 0, 4 %}
-    {% for post in recent_posts %}
-      <article class="post-card">
-        <div class="post-date">{{ post.date | date: "%b %d, %Y" }}</div>
-        <div class="post-card-main">
-          <div class="post-tags">
-            {% if post.categories.size > 0 %}
-              {% for category in post.categories limit:2 %}<span class="tag">{{ category | replace: '-', ' ' }}</span>{% endfor %}
-            {% else %}
-              <span class="tag">Threat research</span>
-            {% endif %}
-          </div>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-          {% if post.excerpt %}<p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>{% endif %}
-          <a class="read-link" href="{{ post.url | relative_url }}">Read research <span aria-hidden="true">↗</span></a>
-        </div>
-        <span class="post-arrow" aria-hidden="true">↗</span>
-      </article>
-    {% else %}
-      <p class="empty-state">New research will appear here as it is published.</p>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="closing-panel">
-  <div><p class="eyebrow">RESEARCH NOTES, NOT NOISE</p><h2>From technical findings to defensive value.</h2><p>This blog documents campaign analysis, attacker techniques, and practical ideas for improving security detections.</p></div>
-  <a class="button button-secondary" href="{{ '/about/' | relative_url }}">More about this site <span aria-hidden="true">→</span></a>
-</section>
+<section class="gold-border rounded-2xl p-8 md:p-10"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center"><div class="md:col-span-2"><div class="font-mono text-xs text-horo-gold font-semibold tracking-widest mb-3">RESEARCH NOTES // DEFENSIVE CONTEXT</div><h2 class="font-serif text-2xl md:text-3xl font-bold text-white">From technical findings to defensive value.</h2><p class="text-slate-300 text-sm leading-relaxed mt-3 max-w-2xl">This publication documents threat activity, technical observations, infrastructure research, and detection opportunities with a focus on practical value for security teams.</p></div><div><a href="{{ '/about/' | relative_url }}" class="inline-flex px-5 py-3 rounded-full border border-horo-gold/40 bg-horo-gold/15 text-horo-gold font-mono text-xs font-semibold">About marktsec →</a></div></div></section>
