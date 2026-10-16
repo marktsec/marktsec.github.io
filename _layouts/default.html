@@ -1,42 +1,6 @@
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b1120">
-    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-    <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
-    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-    {% feed_meta %}
-    {% seo %}
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="brand-copy"><strong>MARKTSEC</strong><small>THREAT INTELLIGENCE &amp; RESEARCH</small></span>
-        </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-          <a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}aria-current="page"{% endif %}>Research</a>
-          <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>About</a>
-          <a class="nav-github" href="https://github.com/marktsec/marktsec.github.io" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content" class="site-main">
-      {{ content }}
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div><strong>MARKTSEC</strong><p>Independent cybersecurity research.</p></div>
-        <div class="footer-right"><span>Threat intelligence · Malware analysis · Detection engineering</span><span>© {{ site.time | date: "%Y" }} · Built with Jekyll and GitHub Pages</span></div>
-      </div>
-    </footer>
-  </body>
-</html>
+<!DOCTYPE html><html lang="{{ page.lang | default: 'en' }}" class="dark scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title><meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | escape }}"><link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}"><script src="https://cdn.tailwindcss.com"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"><script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{serif:['"Playfair Display"','serif'],sans:['"Plus Jakarta Sans"','sans-serif'],mono:['"JetBrains Mono"','monospace']},colors:{horo:{950:'#030406',900:'#080a10',850:'#0e111a',800:'#141824',gold:'#d4af37',goldLight:'#f3c68f',goldDark:'#8c6d46',ruby:'#e11d48',rose:'#e0a98b'}}}}}</script><link rel="stylesheet" href="{{ '/assets/css/chronometer.css' | relative_url }}">{% feed_meta %}{% seo %}</head><body class="min-h-screen flex flex-col antialiased selection:bg-horo-gold/30 selection:text-white">
+<div class="fixed inset-0 pointer-events-none z-0 opacity-15 overflow-hidden flex items-center justify-center"><svg class="w-[1000px] h-[1000px] text-horo-gold animate-[spin_120s_linear_infinite]" viewBox="0 0 200 200"><circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width=".5" stroke-dasharray="3 3"/><circle cx="100" cy="100" r="75" fill="none" stroke="currentColor" stroke-width=".3"/><path d="M100 5L100 15M100 185L100 195M5 100L15 100M185 100L195 100M33 33L40 40M160 160L167 167M33 167L40 160M160 33L167 40" stroke="currentColor" stroke-width="1.5"/><circle cx="100" cy="100" r="45" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width=".4" stroke-dasharray="2 2"/><circle cx="100" cy="100" r="8" fill="#e11d48"/></svg></div>
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden flex flex-col justify-between p-6 binary-watermark text-xs leading-none text-horo-gold"><div>01010100 01001000 01010010 01000101 01000001 01010100 01001001 01001110 01000111</div><div>01001001 01001110 01010100 01000101 01001100 01001100 01001001 01000111 01000101 01001110 01000011 01000101</div><div>01000011 01001111 01001101 01010000 01001001 01000001 01001110 01000001 01001100 01011001 01010011 01001001 01010011</div></div>
+<header class="sticky top-0 z-50 w-full border-b border-horo-gold/25 bg-horo-950/90 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6"><a href="{{ '/' | relative_url }}" class="flex items-center space-x-4 group"><div class="relative w-11 h-11 rounded-full border border-horo-gold/60 flex items-center justify-center bg-horo-900/90 shadow-[0_0_20px_rgba(212,175,55,0.25)]"><svg class="w-6 h-6 animate-[spin_30s_linear_infinite]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke="#d4af37" stroke-width="1.5"><circle cx="12" cy="12" r="9" stroke-dasharray="2 2"/><circle cx="12" cy="12" r="5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="2" fill="#e11d48"/></svg></div><div><span class="font-serif text-xl font-bold tracking-widest text-white block group-hover:text-horo-gold transition">MARKTSEC</span><span class="font-mono text-[10px] text-horo-gold/90 tracking-widest uppercase">THREAT INTELLIGENCE // CTI</span></div></a><nav class="flex items-center space-x-2" aria-label="Primary navigation"><a href="{{ '/' | relative_url }}" class="px-4 py-2 font-mono text-xs rounded-full border border-white/10 text-slate-400 hover:text-white transition">[01_HOME]</a><a href="{{ '/research/' | relative_url }}" class="px-4 py-2 font-mono text-xs rounded-full border border-white/10 text-slate-400 hover:text-white transition">[02_RESEARCH]</a><a href="{{ '/about/' | relative_url }}" class="px-4 py-2 font-mono text-xs rounded-full border border-white/10 text-slate-400 hover:text-white transition">[03_ABOUT]</a><a href="https://github.com/marktsec/marktsec.github.io" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 font-mono text-xs rounded-full border border-horo-gold/40 bg-horo-gold/10 text-horo-gold">GITHUB ↗</a></nav></div></header>
+<main class="flex-grow z-10 max-w-7xl w-full mx-auto px-6 py-10 space-y-12">{{ content }}</main>
+<footer class="border-t border-horo-gold/20 bg-horo-950/90 py-8 text-center font-mono text-xs text-slate-500 backdrop-blur-md"><div class="max-w-7xl mx-auto px-6"><div class="font-serif text-lg font-bold text-white">MARKTSEC <span class="font-mono text-xs text-horo-gold font-normal">// CTI RESEARCH</span></div><div class="mt-2">Threat intelligence · Malware analysis · Ransomware research · Detection engineering</div><div class="mt-2 text-slate-600">© {{ site.time | date: "%Y" }} · Independent cybersecurity research</div></div></footer><script src="{{ '/assets/js/site.js' | relative_url }}"></script></body></html>
