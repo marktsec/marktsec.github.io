@@ -1,16 +1,10 @@
-title: "Cybersecurity Research"
-description: "Cyber Threat Intelligence, Malware Analysis and Detection Engineering"
+title: "marktsec // Threat Intelligence Research"
+description: "Cyber Threat Intelligence, malware analysis, ransomware research, attacker infrastructure, and detection engineering."
 url: "https://marktsec.github.io"
 baseurl: ""
 theme: minima
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
 markdown: kramdown
 highlighter: rouge
-
-minima:
-  skin: dark
-  show_excerpts: true
