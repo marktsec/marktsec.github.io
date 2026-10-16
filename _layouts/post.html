@@ -1,24 +1,4 @@
 ---
 layout: default
 ---
-<article class="article-page">
-  <header class="article-header">
-    <a class="back-link" href="{{ '/research/' | relative_url }}">← All research</a>
-    <p class="eyebrow">THREAT INTELLIGENCE / TECHNICAL ANALYSIS</p>
-    <h1>{{ page.title | escape }}</h1>
-    <div class="article-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% if page.author %}<span>By {{ page.author | escape }}</span>{% endif %}
-      {% if page.categories.size > 0 %}<span class="meta-divider">·</span>{% for category in page.categories limit:3 %}<span class="tag">{{ category | replace: '-', ' ' }}</span>{% endfor %}{% endif %}
-    </div>
-    {% if page.description %}<p class="article-deck">{{ page.description | escape }}</p>{% elsif page.excerpt %}<p class="article-deck">{{ page.excerpt | strip_html | normalize_whitespace }}</p>{% endif %}
-  </header>
-  <div class="prose article-prose">
-    {{ content }}
-  </div>
-  <footer class="article-end">
-    <span class="end-mark" aria-hidden="true">◆</span>
-    <p>End of article</p>
-    <a class="text-link" href="{{ '/research/' | relative_url }}">Explore more research →</a>
-  </footer>
-</article>
+<article class="max-w-4xl mx-auto rounded-2xl gold-border p-8 md:p-12"><div class="flex items-center justify-between border-b border-horo-gold/20 pb-4 mb-8 font-mono text-xs"><a href="{{ '/research/' | relative_url }}" class="text-horo-gold hover:underline">← RESEARCH ARCHIVE</a><span class="text-slate-500">MARKTSEC // REPORT</span></div><header class="space-y-5 border-b border-horo-gold/20 pb-8"><div class="flex flex-wrap items-center gap-3 font-mono text-xs">{% for category in page.categories %}<span class="px-3 py-1 rounded-full border border-horo-gold/40 bg-horo-gold/15 text-horo-gold font-semibold uppercase">{{ category | replace: '-', ' ' }}</span>{% endfor %}<span class="text-slate-400">{{ page.date | date: "%B %d, %Y" }}</span><span class="text-emerald-400">TLP:CLEAR</span></div><h1 class="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">{{ page.title | escape }}</h1><div class="font-mono text-xs text-slate-300">{% if page.author %}Authored by <span class="text-horo-gold font-bold">{{ page.author | escape }}</span>{% else %}MARKTSEC // CTI RESEARCH{% endif %}</div>{% if page.tags.size > 0 %}<div class="flex flex-wrap gap-2 pt-2">{% for tag in page.tags %}<span class="text-slate-400 font-mono text-xs">#{{ tag }}</span>{% endfor %}</div>{% endif %}</header><div class="prose prose-invert max-w-none mt-8 article-body">{{ content }}</div><footer class="pt-8 mt-10 border-t border-horo-gold/20 flex flex-col sm:flex-row gap-4 items-center justify-between"><div class="font-serif text-lg font-bold text-white">MARKTSEC <span class="font-mono text-xs text-horo-gold font-normal">// CTI RESEARCH</span></div><a href="{{ '/research/' | relative_url }}" class="px-4 py-2 font-mono text-xs rounded-full border border-horo-gold/40 bg-horo-gold/15 text-horo-gold">Back to Research →</a></footer></article>
