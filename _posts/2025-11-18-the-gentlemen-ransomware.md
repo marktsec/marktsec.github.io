@@ -27,27 +27,27 @@ author: marktsec
 
 "The Gentlemen" ransomware group, which emerged around July 2025 as a ransomware threat actor group with relatively advanced methodologies. The Gentlemen group employs a dual-extortion strategy, not only encrypting sensitive files but also exfiltrating critical business data and threatening to publish it on dark web leak sites unless a ransom is paid. The group has demonstrated a unique approach by combining established ransomware techniques with newer strategies, making them quick to adapt to new attack vectors, allowing them to remain a persistent to evolving threat to organizations worldwide.
 
-![Figure 1](/assets/images/figure1.png)
+![Figure 1](/assets/images/thegentlemen/figure1.png)
 
 ## Key Points
 **Emergence of “The Gentlemen”:** “The Gentlemen” ransomware group emerged around July 2025, and according to their data leak site activity, began the publication of 48 victims in September and October 2025.
 They employ advanced dual-extortion tactics, encrypting data while also exfiltrating sensitive business information, threatening to release it unless a ransom is paid.
 
-![Figure 2](/assets/images/figure2.png)
+![Figure 2](/assets/images/thegentlemen/figure2.png)
 *Figure 2. “The Gentlemen” DLS is Online*
 
 **Development of RaaS and Affiliate Models:** According to a statement from PRODAFT, before creating their own Ransomware-as-a-Service (RaaS) platform, “The Gentlemen” experimented with various affiliate models used by other prominent ransomware groups. This experience allowed them to refine their methods and eventually create their own RaaS operation.
 
-![Figure 3](/assets/images/figure3.png)
+![Figure 3](/assets/images/thegentlemen/figure3.png)
 
-![Figure 4](/assets/images/figure4.png)
+![Figure 4](/assets/images/thegentlemen/figure4.png)
 *Hastalamuerte (LARVA-368) was seeking access to the Qilin ransomware locker panel. They mention being new to the operations and express interest in exploring other ransomware software options on the market. This suggests that the user may have been considering or testing various RaaS platforms before eventually developing their own.*
 
 **Latest Ransomware Update:** The most recent update from The Gentlemen introduces advanced capabilities for automatic self-restart and run-on-boot functionality, enhancing their persistence on compromised systems. The ransomware also now supports flexible encryption speeds and distribution methods using WMI, PowerShell remoting, and other tools to propagate across networks. Additionally, it targets both local disks and network-shared drives, emphasizing the group's evolving approach to maintaining control and increasing the impact of their attacks.
 
-![Figure 5](/assets/images/figure5.png)
+![Figure 5](/assets/images/thegentlemen/figure5.png)
 
-![Figure 6](/assets/images/figure6.png)
+![Figure 6](/assets/images/thegentlemen/figure6.png)
 *The ransomware changelogs from the darknet forum*
 
 The group has released significant updates to its Win/Linux/ESXi locker variants, introducing improved automation, persistence, and encryption performance.
@@ -93,11 +93,11 @@ The Gentlemen ransomware combines advanced encryption techniques with dynamic pr
 
 Key capabilities include its powerful encryption mechanisms, specialized ESXi lockers, and persistent access features, including self-restart and run-on-boot functionality. Additionally, the group’s dual-extortion tactics—encrypting files while exfiltrating sensitive data for later release—are central to its operational strategy.
 
-![Figure 7](/assets/images/figure7.png)
+![Figure 7](/assets/images/thegentlemen/figure7.png)
 
-![Figure 8](/assets/images/figure8.png)
+![Figure 8](/assets/images/thegentlemen/figure8.png)
 
-![Figure 9](/assets/images/figure9.png)
+![Figure 9](/assets/images/thegentlemen/figure9.png)
 *“The Gentlemen” accounts on dark web forums and X.*
 
 ### **RaaS Capabilities:**
@@ -112,9 +112,9 @@ Key capabilities include its powerful encryption mechanisms, specialized ESXi lo
 Below is detailed information on how The Gentlemen ransomware is offered as a Ransomware-as-a-Service (RaaS) and its key features.
 **Briefly about the available functionality:**
 
-![Figure 10](/assets/images/figure10.png)
+![Figure 10](/assets/images/thegentlemen/figure10.png)
 
-![Figure 11](/assets/images/figure11.png)
+![Figure 11](/assets/images/thegentlemen/figure11.png)
 
 - **Reliable Encryption:** Uses XChaCha20 and Curve25519 for strong file encryption.
 - **Configurable Encryption Modes:** Operators can adjust encryption methods for speed and depth, ensuring optimal performance.
@@ -128,10 +128,10 @@ Below is detailed information on how The Gentlemen ransomware is offered as a Ra
 - **Data Collection:** Affiliates must upload encrypted data to a public cloud or approved resource, which will be displayed on the group’s blog.
 - **Security Features:** The program offers tools such as EDR-killer and the multi-chain system only to trusted affiliates.
 
-![Figure 12](/assets/images/figure12.png)
+![Figure 12](/assets/images/thegentlemen/figure12.png)
 *Figure 12. “The Gentlemen” ESXI locker version*
 
-![Figure 13](/assets/images/figure13.png)
+![Figure 13](/assets/images/thegentlemen/figure13.png)
 *Figure 13. A forum user claimed that the locker used by “The Gentlemen” ransomware is written using 'vibecoding' techniques, while “The Gentlemen” seem to approve this statement.*
 
 ## Technical Analysis
@@ -144,12 +144,12 @@ The file hash is as follows:
 
 The file we analyzed is a 64bit Windows executable, written in Golang:
 
-![Figure 14](/assets/images/figure14.png)
+![Figure 14](/assets/images/thegentlemen/figure14.png)
 *Figure 14. “Detect it Easy” analysis information*
 
 When launched, the ransomware executable provides an extensive help message, showing various options and flags available:
 
-![Figure 15](/assets/images/figure15.png)
+![Figure 15](/assets/images/thegentlemen/figure15.png)
 *Figure 15. Windows Variant Command Line Options*
 
 The malware requires a “--password” argument to run the encryption routine. We assume that the argument is passed to the executable by a dropper or other kind of loader at the first step of infection.
@@ -179,17 +179,17 @@ Example invocations:
 
 A quick static analysis shows that the executable contains plaintext ransom note hardcoded:
   
-![Figure 16](/assets/images/figure16.png)
+![Figure 16](/assets/images/thegentlemen/figure16.png)
 *Figure 16. The Gentlemen Ransom Note*
 
 While performing the static analysis, we found a hardcoded string “ ! <...> Ransom Protection(DON’T DELETE)” in the sample:
 
-![Figure 17](/assets/images/figure17.png)
+![Figure 17](/assets/images/thegentlemen/figure17.png)
 *Figure 17. Decompiled code segment from the Gentlemen ransomware sample showing the embedded string “ ! <...> Ransom Protection(DON’T DELETE)”*
 
 After researching, Cybereason Threat Intelligence Team identified a forum post by a user “Hastalamuerte” that discussed the same marker present in “The Gentlemen” sample, while describing its relation to anti-ransomware functionality. 
 
-![Figure 18](/assets/images/figure18.png)
+![Figure 18](/assets/images/thegentlemen/figure18.png)
 *Figure 18. A forum post shared by a user operating under the alias “hastalamuerte” discusses the string “ ! <...> Ransom Protection(DON’T DELETE)” as an example of anti ransomware protection and bypass solutions.*
 
 ### **“The Gentlemen” PowerShell Operation**
