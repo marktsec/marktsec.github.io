@@ -27,18 +27,18 @@ author: marktsec
 
 "The Gentlemen" ransomware group, which emerged around July 2025 as a ransomware threat actor group with relatively advanced methodologies. The Gentlemen group employs a dual-extortion strategy, not only encrypting sensitive files but also exfiltrating critical business data and threatening to publish it on dark web leak sites unless a ransom is paid. The group has demonstrated a unique approach by combining established ransomware techniques with newer strategies, making them quick to adapt to new attack vectors, allowing them to remain a persistent to evolving threat to organizations worldwide.
 
-![Figure 1](/assets/images/thegentlemen/figure1.png)
+![Figure 1](/assets/images/thegentlemen/figure1.jpg)
 
 ## Key Points
 **Emergence of “The Gentlemen”:** “The Gentlemen” ransomware group emerged around July 2025, and according to their data leak site activity, began the publication of 48 victims in September and October 2025.
 They employ advanced dual-extortion tactics, encrypting data while also exfiltrating sensitive business information, threatening to release it unless a ransom is paid.
 
-![Figure 2](/assets/images/thegentlemen/figure2.png)
+![Figure 2](/assets/images/thegentlemen/figure2.jpg)
 *Figure 2. “The Gentlemen” DLS is Online*
 
 **Development of RaaS and Affiliate Models:** According to a statement from PRODAFT, before creating their own Ransomware-as-a-Service (RaaS) platform, “The Gentlemen” experimented with various affiliate models used by other prominent ransomware groups. This experience allowed them to refine their methods and eventually create their own RaaS operation.
 
-![Figure 3](/assets/images/thegentlemen/figure3.png)
+![Figure 3](/assets/images/thegentlemen/figure3.jpg)
 
 ![Figure 4](/assets/images/thegentlemen/figure4.png)
 *Hastalamuerte (LARVA-368) was seeking access to the Qilin ransomware locker panel. They mention being new to the operations and express interest in exploring other ransomware software options on the market. This suggests that the user may have been considering or testing various RaaS platforms before eventually developing their own.*
