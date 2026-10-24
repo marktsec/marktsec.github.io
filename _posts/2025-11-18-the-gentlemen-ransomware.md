@@ -187,7 +187,7 @@ While performing the static analysis, we found a hardcoded string “ ! <...> Ra
 ![Figure 17](/assets/images/thegentlemen/figure17.png)
 *Figure 17. Decompiled code segment from the Gentlemen ransomware sample showing the embedded string “ ! <...> Ransom Protection(DON’T DELETE)”*
 
-After researching, Cybereason Threat Intelligence Team identified a forum post by a user “Hastalamuerte” that discussed the same marker present in “The Gentlemen” sample, while describing its relation to anti-ransomware functionality. 
+A forum post by a user “Hastalamuerte” discussed the same marker present in “The Gentlemen” sample, while describing its relation to anti-ransomware functionality. 
 
 ![Figure 18](/assets/images/thegentlemen/figure18.png)
 *Figure 18. A forum post shared by a user operating under the alias “hastalamuerte” discusses the string “ ! <...> Ransom Protection(DON’T DELETE)” as an example of anti ransomware protection and bypass solutions.*
