@@ -27,7 +27,7 @@ Days later, rival group DragonForce publicly claimed it had absorbed RansomHub�
 
 Whether this was a hostile takeover, a voluntary merger, or simply opportunistic branding remains unclear—but RansomHub ceased all activity, leaving victims mid-negotiation and sowing confusion.
 
-![RansomHub DLS is offline](/assets/images/image1.png)
+![RansomHub DLS is offline](/assets/images/qilin/image1.png)
 
 *Figure 1. RansomHub DLS is offline*
 
@@ -39,13 +39,13 @@ On May 8th, LockBit’s leak site was defaced and replaced with a taunting messa
 
 CRIME IS BAD. xoxo from Prague."
 
-![Everest Ransomware DLS](/assets/images/image2.png)
+![Everest Ransomware DLS](/assets/images/qilin/image2.png)
 
 *Figure 2. Everest Ransomware DLS*
 
 The attacker leaked a full database dump containing chat transcripts and operational data, which was later confirmed by researchers as authentic, severely damaging LockBit’s internal security reputation.
 
-![LockBit Ransomware DLS defaced with link to database](/assets/images/image3.png)
+![LockBit Ransomware DLS defaced with link to database](/assets/images/qilin/image3.png)
 
 *Figure 3. LockBit Ransomware DLS defaced with link to database*
 
@@ -55,7 +55,7 @@ Their Tor-based leak site was similarly replaced with the same mocking message, 
 
 While the identity of the group remains unknown, the attacks suggest that ransomware groups themselves are now becoming targets—either of vigilantes, rivals, or external pressure campaigns.
 
-![BlackLock (aka Eldorado, Mamona) Local File Include vulnerability used for credential leak](/assets/images/image4.png)
+![BlackLock (aka Eldorado, Mamona) Local File Include vulnerability used for credential leak](/assets/images/qilin/image4.png)
 
 *Figure 4. BlackLock (aka Eldorado, Mamona) Local File Include vulnerability used for credential leak*
 
@@ -72,7 +72,7 @@ However, evidence suggests the action may have been coordinated, as BlackLock’
 
 This points to either a soft handover or strategic absorption under DragonForce’s expanding umbrella.
 
-![DragonForce DLS is down. (Still down in May)](/assets/images/image5.png)
+![DragonForce DLS is down. (Still down in May)](/assets/images/qilin/image5.png)
 
 *Figure 5. DragonForce DLS is down. (Still down in May)*
 
@@ -96,7 +96,7 @@ The group operates by providing its ransomware tools and infrastructure to affil
 - The group’s panel offers advanced features such as customizable encryption modes, safe-mode execution, log cleaning, network spreading, and secure negotiation tools—all designed for affiliate ease and operational stealth. 
 - Qilin is expanding its ecosystem with unique offerings like legal and media support, PB-scale data storage, and spam tools—positioning itself not just as a ransomware gang, but as a full-service cybercrime platform.
 
-![A photo of an encrypted host (source: X)](/assets/images/image6.png)
+![A photo of an encrypted host (source: X)](/assets/images/qilin/image6.png)
 
 *Figure 6. A photo of an encrypted host (source: X)*
 
@@ -106,24 +106,24 @@ Once they gain access to a network, they steal sensitive data, disrupt systems, 
 
 Ransom demands usually range from $50,000 to $800,000, making it a flexible and financially motivated threat actor.
 
-![QILIN DLS is Online](/assets/images/image7.png)
+![QILIN DLS is Online](/assets/images/qilin/image7.png)
 
 *Figure 7. QILIN DLS is Online*
 
 In February 2024, reports emerged that Qilin was operating a website called “WikiLeaks V2,” where it published data stolen from compromised companies.
 
-![WikiLeaks V2](/assets/images/image8.png)
+![WikiLeaks V2](/assets/images/qilin/image8.png)
 *Figure 8.
 
 The last recorded activity on the website was in April 2025.
 
 As of May 2025, the website, which is hosted by OPTIMA LLC.
 
-![Qilin wikileaks v2 project old server information (Shodan)](/assets/images/image9.png)
+![Qilin wikileaks v2 project old server information (Shodan)](/assets/images/qilin/image9.png)
 
 *Figure 9. Qilin wikileaks v2 project old server information (Shodan)*
 
-![New Qilin wikileaks v2 project server (Shodan)](/assets/images/image10.png)
+![New Qilin wikileaks v2 project server (Shodan)](/assets/images/qilin/image10.png)
 
 *Figure 10. New Qilin wikileaks v2 project server (Shodan)*
 
@@ -148,7 +148,7 @@ Additionally, with network propagation capabilities and a DDoS option introduced
 - Network Spreading: Can propagate through networks if credentials are gathered during setup.
 
 Below is detailed information on how the Qilin ransomware is offered as a Ransomware-as-a-Service (RaaS) and its key features.
-![QILIN RaaS](/assets/images/image11.png)
+![QILIN RaaS](/assets/images/qilin/image11.png)
 *Figure 11.
 
 Translation:  
@@ -182,13 +182,13 @@ The build is written in pure Rust, which gives it speed and security advantages.
 For LINUX/ESXI systems, it’s written in pure C.*
 
 Qilin explicitly instructs its affiliates not to target systems located in CIS countries
-![QILIN RaaS](/assets/images/image12.png)
+![QILIN RaaS](/assets/images/qilin/image12.png)
 *Figure 12. In March 2023 Group-IB researchers exposed Qilin administrative panel*
 
 The DDOS option was added to the panel in April 2025. 
 
 **Additional most interesting options:** 
-![QILIN RaaS](/assets/images/image14.png)
+![QILIN RaaS](/assets/images/qilin/image14.png)
 *Figure 14. New features*
 “Qilin has introduced several new features in its latest version: 
 
@@ -198,7 +198,7 @@ Upon registration, a certain amount of space will be allocated to you for secure
 - A tool for spamming corporate email addresses, followed by a tool for spamming phone numbers; 
 - An in-house team of journalists who, in cooperation with legal experts, can help you write texts for blog posts and also assist with pressure during negotiations.”
 
-![QILIN RaaS](/assets/images/image15.png)
+![QILIN RaaS](/assets/images/qilin/image15.png)
 *Figure 15. New features*
 Translation: 
 
@@ -215,7 +215,7 @@ The benefits of working with the legal department include:
 - Ability to conduct direct negotiations between the company and the lawyer; 
 - Advice on how to inflict maximum financial damage on the company if it refuses to comply (and how to avoid similar situations in the future).” The heatmap below, which illustrates reported host compromises, indicates that Qilin is intensifying its activity and emerging as a growing threat.
 
-![QILIN Activity (source: ransomware.live)](/assets/images/image16.png)
+![QILIN Activity (source: ransomware.live)](/assets/images/qilin/image16.png)
 
 *Figure 16. QILIN Activity (source: ransomware.live)*
 
@@ -233,7 +233,7 @@ By examining these samples, we aim to provide insights into Qilin’s cross-plat
 
 31c3574456573c89d444478772597db40f075e25c67b8de39926d2faa63ca1d8
 
-![“Detect it Easy” analysis information](/assets/images/image17.png)
+![“Detect it Easy” analysis information](/assets/images/qilin/image17.png)
 
 *Figure 17. “Detect it Easy” analysis information*
 
@@ -253,11 +253,11 @@ Additionally, it installs the Active Directory PowerShell (AD PS) module to expl
 
 In the final phase, Qilin deletes its own traces by self-deleting after executing all its malicious actions. –
 
-![no-admin flag used when user doesn’t have administrator privileges](/assets/images/image18.png)
+![no-admin flag used when user doesn’t have administrator privileges](/assets/images/qilin/image18.png)
 
 *Figure 18. no-admin flag used when user doesn’t have administrator privileges*
 
-![Embedded ransom note and print option](/assets/images/image19.png)
+![Embedded ransom note and print option](/assets/images/qilin/image19.png)
 
 *Figure 19. Embedded ransom note and print option*
 
@@ -265,7 +265,7 @@ Qilin runs a PowerShell command to identify and print ransom notes via any disco
 ```pwsh
 powershell -Command Get-Printer | Format-List Name, Driver,shared
 ```
-![PsEXEC dropping. PsExec used to spread to domain computers](/assets/images/image20.png)
+![PsEXEC dropping. PsExec used to spread to domain computers](/assets/images/qilin/image20.png)
 
 *Figure 20. PsEXEC dropping. PsExec used to spread to domain computers*
 
@@ -316,13 +316,13 @@ Key Capabilities of the Script:
 - Payload Deployment: A core objective of the script is to upload and execute a malicious payload across all discovered ESXi hosts.
 - Root password modifications and SSH activation on all hosts.
 - Payload execution on hypervisors.
-![Download and Install](/assets/images/image21.png)
+![Download and Install](/assets/images/qilin/image21.png)
 *Figure 21. Downloads and installs the .NET Framework silently*
  
-![vCenter ESXi](/assets/images/image22.png)
+![vCenter ESXi](/assets/images/qilin/image22.png)
 *Figure 22. vCenter ESXi hosts enumeration*
 
-![ESXi credential changes](/assets/images/image23.png)
+![ESXi credential changes](/assets/images/qilin/image23.png)
 *Figure 23. ESXi credential changes*
 
 The Qilin Windows variant, written in Rust, is a sophisticated ransomware that requires a password to initiate its malicious operations, leveraging command-line parameters to execute a range of destructive actions.
@@ -339,7 +339,7 @@ To gain a deeper understanding of its behavior and specific targets, we conducte
 
 Linux sample hash: a7f2a21c0cd5681eab30265432367cf4b649d2b340963a977e70a16738e955a c
 
-![“Detect it Easy” analysis information](/assets/images/image24.png)
+![“Detect it Easy” analysis information](/assets/images/qilin/image24.png)
 
 *Figure 24. “Detect it Easy” analysis information*
 
@@ -347,7 +347,7 @@ The analyzed Qilin sample is written in C.
 
 This Linux variant uses no packing or obfuscation, so its malicious intent can be exposed simply by running the strings command.
 
-![strings command output](/assets/images/image25.png)
+![strings command output](/assets/images/qilin/image25.png)
 
 *Figure 25. strings command output*
 
@@ -376,7 +376,7 @@ The ransomware requires a password as an argument (--password) before proceeding
 
 This is a common technique used to evade dynamic analysis tools, such as sandboxes.
 
-![Input password check switch](/assets/images/image26.png)
+![Input password check switch](/assets/images/qilin/image26.png)
 
 *Figure 26. Input password check switch*
 
@@ -388,7 +388,7 @@ The malware calls uname and checks if the malware is running on:
 - FreeBSD 
 - Nutanix 
 - “Unknown” (if cannot determine which linux distributive) 
-![Linux](/assets/images/image27.png)
+![Linux](/assets/images/qilin/image27.png)
 
 *Figure 27.*
 Depending on the detection of ESXi host or Nutanix host, it will perform different actions.
@@ -461,13 +461,13 @@ Specifically, it encrypts:
 
 Once the malware encrypts all target files, it creates a ransom note file suffixed _RECOVER.txt that contains detailed payment instructions and steps for file recovery.
 
-![Hardcoded ransom note](/assets/images/image28.png)
+![Hardcoded ransom note](/assets/images/qilin/image28.png)
 
 *Figure 28. Hardcoded ransom note*
 
 In addition to dropping a ransom notes on disk, the malware also injects its demand into the system’s /etc/motd (Message of the Day), ensuring that every user who logs in via shell is immediately presented with the ransom instructions upon authentication:
 
-![motd injection code](/assets/images/image29.png)
+![motd injection code](/assets/images/qilin/image29.png)
 
 *Figure 29. motd injection code*
 
