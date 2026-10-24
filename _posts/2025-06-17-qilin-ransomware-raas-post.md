@@ -2,7 +2,7 @@
 layout: post
 title: "Ransomware Gangs Collapse as Qilin Seizes Control"
 date: 2025-06-17
-author: "Mark T. and Evgeny A."
+author: "Mark T. (marktsec) and Evgeny A."
 categories: [threat-intelligence, ransomware]
 tags: [Qilin, RaaS, ransomware, Windows, Linux, ESXi, Nutanix, MITRE ATT&CK]
 ---
