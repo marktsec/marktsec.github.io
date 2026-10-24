@@ -84,7 +84,7 @@ Even though the site was hosted behind Cloudflare, by analyzing the website’s 
 ![Figure 9: Direct IP access](/assets/images/extmadgicx/image9.png)
 *Figure 9: Direct access to the IP 185.245.104[.]195 returns the Madgicx lure website.*
 
-![Figure 10: VDSina hosting provider](/assets/images/iextmadgicx/mage10.png)
+![Figure 10: VDSina hosting provider](/assets/images/iextmadgicx/image10.png)
 *Figure 10: The website is hosted on VDSina, a service known for hosting malicious resources.*
 
 ![Figure 11: Malwarebytes detections for VDSina](/assets/images/extmadgicx/image11.png)
