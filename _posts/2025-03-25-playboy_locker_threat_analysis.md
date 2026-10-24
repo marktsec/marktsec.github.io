@@ -7,7 +7,7 @@ author: marktsec
 
 # Threat Analysis: PlayBoy Locker
 
-Cybereason has released a comprehensive threat analysis investigating a new Ransomware-as-a-Service (RaaS) threat known as **PlayBoy Locker**. Despite a seemingly promising launch on underground forums in late 2024, the operators unexpectedly shut down and attempted to sell the project after limited activity. However, the ransomware itself proved to be technically sophisticated, supporting Windows, NAS, and ESXi environments, and included capabilities for multi-threaded encryption, Active Directory propagation, and volume shadow copy deletion.
+Threat analysis of a new Ransomware-as-a-Service (RaaS) threat known as **PlayBoy Locker**. Despite a seemingly promising launch on underground forums in late 2024, the operators unexpectedly shut down and attempted to sell the project after limited activity. However, the ransomware itself proved to be technically sophisticated, supporting Windows, NAS, and ESXi environments, and included capabilities for multi-threaded encryption, Active Directory propagation, and volume shadow copy deletion.
 
 ## Key Points
 
