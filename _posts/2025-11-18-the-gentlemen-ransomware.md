@@ -14,7 +14,7 @@ author: marktsec
 >
 > **Original publication date:** November 18, 2025  
 > **Original publisher:** Cybereason  
-> **Authors:** Mark T. and Evgeny A.
+> **Authors:** Mark T.
 
 # License to Encrypt: “The Gentlemen” Make Their Move
 
