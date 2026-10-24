@@ -15,7 +15,7 @@ Investigation into a broader malicious Chrome extension campaign, part of which 
 
 Promoted as a tool to streamline campaign management and boost ROI using artificial intelligence, the extension instead delivers potentially malicious functionalities capable of hijacking business sessions, stealing credentials, and compromising Meta Business accounts. Notably, several domains associated with earlier parts of the campaign have been repurposed to promote this new theme, highlighting the operators’ tendency to recycle infrastructure while adapting their social engineering strategy to new targets.
 
-![Figure 1: Campaign Lure Overview](assets/images/image1.png)
+![Figure 1: Campaign Lure Overview](assets/images/extmadgicx/image1.png)
 
 ---
 
@@ -56,38 +56,38 @@ Importantly, there is no indication that Madgicx itself is connected to this act
 * `hxxps[:]//www.similarweb[.]one`
 * `hxxps[:]//www.webwatch[.]world`
 
-![Figure 2: privacy-shield[.]world lure website promotes madgicx extension](assets/images/image2.png)
+![Figure 2: privacy-shield[.]world lure website promotes madgicx extension](assets/images/extmadgicx/image2.png)
 *Figure 2: Example of privacy-shield[.]world lure website promoting the malicious extension.*
 
-![Figure 3: siteanalyzer[.]world lure website promotes madgicx extension](assets/images/image3.png)
+![Figure 3: siteanalyzer[.]world lure website promotes madgicx extension](assets/images/extmadgicx/image3.png)
 *Figure 3: Example of siteanalyzer[.]world lure website.*
 
-![Figure 4: viewdns.info shows 3 IP addresses behind Cloudflare services](assets/images/image4.png)
+![Figure 4: viewdns.info shows 3 IP addresses behind Cloudflare services](assets/images/extmadgicx/image4.png)
 *Figure 4: viewdns.info showing 3 IP addresses hidden behind Cloudflare services.*
 
 Analysis revealed that `www.web-radar[.]world` and `web-radar[.]world` resolve to the same Cloudflare IP addresses yet display different content. This difference is not caused by DNS redirection but by server-side logic that adjusts responses based on the Host header. Further investigation found this pattern repeated across other domains in the campaign, with `www` and non-`www` variants delivering distinct lure content. This configuration allows operators to run multiple themed pages from the same infrastructure, enabling content diversification while reducing hosting costs and complicating detection.
 
-![Figure 5: The Madgicx extension is linked by www.web-radar[.]world](assets/images/image5.png)
+![Figure 5: The Madgicx extension is linked by www.web-radar[.]world](assets/images/extmadgicx/image5.png)
 *Figure 5: The Madgicx extension hosted and linked by www.web-radar[.]world.*
 
-![Figure 6: The Web Radar extension linked by web-radar[.]world](assets/images/image6.png)
+![Figure 6: The Web Radar extension linked by web-radar[.]world](assets/images/extmadgicx/image6.png)
 *Figure 6: The Web Radar extension, part of the same campaign, linked by web-radar[.]world (since removed from the Chrome Store).*
 
 Even though the site was hosted behind Cloudflare, by analyzing the website’s hosted resources, it was possible to identify unique artifacts that led to the origin server’s IP address.
 
-![Figure 7: Infrastructure reuse between Debank and Madgicx](assets/images/image7.png)
+![Figure 7: Infrastructure reuse between Debank and Madgicx](assets/images/extmadgicx/image7.png)
 *Figure 7: The malicious Debank extension lure site and the Madgicx website were hosted on the same infrastructure, indicating a reuse of resources.*
 
-![Figure 8: Shodan IP lookup](assets/images/image8.png)
+![Figure 8: Shodan IP lookup](assets/images/extmadgicx/image8.png)
 *Figure 8: According to Shodan, the IP behind Cloudflare is 185.245.104[.]195, hosted by VDSina provider.*
 
-![Figure 9: Direct IP access](assets/images/image9.png)
+![Figure 9: Direct IP access](assets/images/extmadgicx/image9.png)
 *Figure 9: Direct access to the IP 185.245.104[.]195 returns the Madgicx lure website.*
 
-![Figure 10: VDSina hosting provider](assets/images/image10.png)
+![Figure 10: VDSina hosting provider](assets/images/iextmadgicx/mage10.png)
 *Figure 10: The website is hosted on VDSina, a service known for hosting malicious resources.*
 
-![Figure 11: Malwarebytes detections for VDSina](assets/images/image11.png)
+![Figure 11: Malwarebytes detections for VDSina](assets/images/extmadgicx/image11.png)
 *Figure 11: Source: Malwarebytes detections for VDSina.ru hosting.*
 
 The first phase of the investigation uncovered a network of lure websites impersonating legitimate advertising tools, including the fraudulent “Madgicx Plus” platform. Analysis of these sites’ resources exposed the real hosting infrastructure hidden behind Cloudflare, revealing the service provider and IP address in use.
@@ -120,40 +120,40 @@ This phase of the investigation examines the malicious Chrome extension through 
 
 ### Manifest.json
 
-![Figure 12: Manifest.json host_permissions](assets/images/image12.png)
+![Figure 12: Manifest.json host_permissions](assets/images/extmadgicx/image12.png)
 *Figure 12: `host_permissions` grants full access to all websites the user visits.*
 
 This enables the extension to inject content scripts, read DOM data, and potentially hijack sessions across any domain. 
 `declarativeNetRequest`, `declarativeNetRequestWithHostAccess` - These allow the extension to intercept and modify network traffic, including headers and redirect chains, without user knowledge. In combination with full host access, it enables powerful man-in-the-browser capabilities.
 
-![Figure 13: Content_scripts permissions](assets/images/image13.png)
+![Figure 13: Content_scripts permissions](assets/images/extmadgicx/image13.png)
 *Figure 13: `content_scripts` permissions.*
 
 The `content_scripts` permission allows the extension to automatically inject and execute custom JavaScript code on every website the user visits. In practice, this means the extension can monitor browsing activity, capture form inputs, modify page content, or interact with web applications without the user’s awareness. When misused, this capability can be weaponized to harvest sensitive information (such as login credentials), perform unauthorized actions in active sessions, or manipulate the user’s experience to further social engineering goals.
 
-![Figure 14: CSP Bypass](assets/images/image14.png)
+![Figure 14: CSP Bypass](assets/images/extmadgicx/image14.png)
 *Figure 14: CSP Bypass mechanisms.*
 
 This appears to be bypassing CSP (Content Security Policy). Disabling it allows the extension to inject arbitrary scripts even into secured apps like Facebook, Gmail, etc.
 
 ### Rules.json
 
-![Figure 15: Declarative Net Request Rules](assets/images/image15.png)
+![Figure 15: Declarative Net Request Rules](assets/images/extmadgicx/image15.png)
 *Figure 15: The code removes the Origin HTTP header from requests whose URLs match the regex.*
 
 The extension uses a Declarative Net Request rule to strip the Origin header from outbound requests containing the parameter `caller=ext`. This is an indicator of Cross-Origin Resource Sharing policies evasion and is commonly employed in privacy-invasive or malicious extensions to bypass Facebook’s origin validation mechanisms.
 
 ### background.iife.js
 
-![Figure 16: background.iife.js code snippet](assets/images/image16.png)
+![Figure 16: background.iife.js code snippet](assets/images/extmadgicx/image16.png)
 *Figure 16: Unauthorized API access functions.*
 
 The code indicates unauthorized API access using the victim’s session or tokens. By stealing a valid session token, the extension bypasses the need for login credentials entirely and can impersonate the victim directly. This grants the attacker access to the victim’s authenticated environment, allowing them to perform actions such as viewing private data, modifying account settings, or even managing advertising assets, effectively taking over the account without ever knowing the password.
 
-![Figure 17: C2 Communication](assets/images/image17.png)
+![Figure 17: C2 Communication](assets/images/extmadgicx/image17.png)
 *Figure 17: External communications routing.*
 
-![Figure 18: C2 Domain Hardcoding](assets/images/image18.png)
+![Figure 18: C2 Domain Hardcoding](assets/images/extmadgicx/image18.png)
 *Figure 18: Hardcoded C2 domain references.*
 
 Additionally, it communicates with `hxxps[:]//madgicx-plus[.]com` which is not Meta, and functions potentially as a C2 domain.
@@ -164,25 +164,25 @@ Additionally, it communicates with `hxxps[:]//madgicx-plus[.]com` which is not M
 
 Dynamic analysis involves running the extension in a controlled environment to observe its real-time behavior, network communications, and interactions with browser APIs.
 
-![Figure 19: Local storage harvesting](assets/images/image19.png)
+![Figure 19: Local storage harvesting](assets/images/extmadgicx/image19.png)
 *Figure 19: Harvesting Google account details.*
 
 Once a user links their Google account, the extension quietly stores sensitive account details within its local storage, ensuring persistence and long-term access. Rather than ending there, the extension quickly escalates by prompting the user to connect their Facebook account.
 
-![Figure 20: Facebook connection prompt](assets/images/image20.png)
+![Figure 20: Facebook connection prompt](assets/images/extmadgicx/image20.png)
 *Figure 20: Escalating to request Facebook connectivity.*
 
 This staged approach reveals a clear threat-actor strategy: first capturing Google identity data, then pivoting to Facebook to broaden access and increase the chances of hijacking valuable business or advertising assets.
 
-![Figure 21: Identity and Token Capturing](assets/images/image21.png)
+![Figure 21: Identity and Token Capturing](assets/images/extmadgicx/image21.png)
 *Figure 21: Capturing identity and session tokens dynamically.*
 
 **Network Requests to C2:**
 
-![Figure 22: C2 Network Request Log](assets/images/image22.png)
+![Figure 22: C2 Network Request Log](assets/images/extmadgicx/image22.png)
 *Figure 22: Active request transmitted to the C2 server.*
 
-![Figure 23: Payload Delivery](assets/images/image23.png)
+![Figure 23: Payload Delivery](assets/images/extmadgicx/image23.png)
 *Figure 23: Data payload successfully sent out.*
 
 ---
