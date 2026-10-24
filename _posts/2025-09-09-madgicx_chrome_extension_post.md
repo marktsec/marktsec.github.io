@@ -6,7 +6,9 @@ categories: [Threat-Intelligence, Malware-Analysis]
 tags: [Chrome-Extension, Meta, Malvertising, Credential-Harvesting]
 author: marktsec
 ---
+> **Archival notice:** Originally published by Cybereason on June 17, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260314232341/https://www.cybereason.com/blog/chrome-extension-campaign-madgicx) remains available through the Internet Archive. All rights remain with the original rights holders.
 
+> **Research note:** The analysis and claims below reflect the original publication. Claims made by ransomware operators are presented as claims, not independently verified facts.
 # Behind the Mask of Madgicx Plus: A Chrome Extension Campaign Targeting Meta Advertisers
 
 Investigation into a broader malicious Chrome extension campaign, part of which had been previously documented by DomainTools. While earlier iterations of this campaign involved the impersonation of a variety of services, the latest version shifts focus to Meta (Facebook/Instagram) advertisers through a newly crafted lure: “Madgicx Plus,” a fake AI-driven ad optimization platform. 
