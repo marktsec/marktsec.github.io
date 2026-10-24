@@ -4,7 +4,7 @@ title: "License to Encrypt: 'The Gentlemen' Make Their Move"
 date: 2025-11-18
 categories: [Ransomware, Threat-Intelligence]
 tags: [TheGentlemen, RaaS, ESXi, ReverseEngineering, MITRE-ATT&CK]
-author: marktsec
+author: Mark T. (marktsec)
 ---
 
 
