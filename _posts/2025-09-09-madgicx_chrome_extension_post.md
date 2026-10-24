@@ -4,7 +4,7 @@ title: "Behind the Mask of Madgicx Plus: A Chrome Extension Campaign Targeting M
 date: 2025-09-09
 categories: [Threat-Intelligence, Malware-Analysis]
 tags: [Chrome-Extension, Meta, Malvertising, Credential-Harvesting]
-author: Mark T.
+author: Mark T. (marktsec)
 ---
 > **Archival notice:** Originally published by Cybereason on June 17, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260314232341/https://www.cybereason.com/blog/chrome-extension-campaign-madgicx) remains available through the Internet Archive. All rights remain with the original rights holders.
 
