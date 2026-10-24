@@ -8,9 +8,9 @@ author: marktsec
 ---
 
 
-> **Archival Notice**
->
-> This article was originally authored and published during my employment at Cybereason. It is republished here for personal portfolio, educational, and archival purposes. All rights to the original work remain with the respective copyright holders. The technical analysis, indicators, and context reflect the threat landscape at the time of the original publication.
+> **Archival notice:** Originally published by Cybereason on November 18, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260309195843/https://www.cybereason.com/blog/the-gentlemen-ransomware) remains available through the Internet Archive. All rights remain with the original rights holders.
+
+> **Research note:** The analysis and claims below reflect the original publication. Claims made by ransomware operators are presented as claims, not independently verified facts.
 >
 > **Original publication date:** November 18, 2025  
 > **Original publisher:** Cybereason  
