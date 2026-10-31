@@ -25,21 +25,23 @@ author: Mark T. (marktsec)
 
 The PlayBoy Locker group has been active since September 2024. Its initial post on a darknet forum requested beta testers to try the new locker functionality.
 
-<!-- Add original Image 1 here: request for beta testers to try the new locker functionality. -->
+![Figure 1: Request for beta testers to try the new locker functionality](/assets/images/plocker/image1.png)
 
 The PlayBoy Locker affiliate program was presented on a dark-web forum. Affiliates were expected to share a percentage of ransom payments with the service operator, with the advertised revenue split set at **85/15%**.
 
-<!-- Add original Image 2 here: PlayBoy affiliate program presentation on the Russian Anonymous Marketplace. -->
-<!-- Add original Image 3 here: additional view of the PlayBoy affiliate program presentation. -->
+![Figure 2: PlayBoy affiliate program presentation on the Russian Anonymous Marketplace](/assets/images/plocker/image2.png)
+
+![Figure 3: Additional view of the PlayBoy affiliate program presentation](/assets/images/plocker/image3.png)
 
 PlayBoy Locker also created an onion site and listed its first victim.
 
-<!-- Add original Image 4 here: PlayBoy Locker onion site / first listed victim. -->
+![Figure 4:  PlayBoy Locker onion site / first listed victim](/assets/images/plocker/image4.png)
 
 Unexpectedly, the operators later published a sales pitch on the dark web, attempting to sell the project and bring the operation to a close.
 
-<!-- Add original Image 5 here: PlayBoy Locker project sale announcement. -->
-<!-- Add original Image 6 here: additional view of the project sale announcement. -->
+![Figure 5:   PlayBoy Locker project sale announcement](/assets/images/plocker/image5.png)
+
+![Figure 6: Additional view of the project sale announcement](/assets/images/plocker/image6.png)
 
 ## Technical Analysis
 
@@ -61,7 +63,7 @@ The known Windows versions of PlayBoy Locker demonstrate the following capabilit
 - Customizable ransom note.
 - Recycle Bin emptying.
 
-<!-- Add original Image 7 here: PlayBoy Locker Windows binary. -->
+![Figure 7: PlayBoy Locker Windows binary](/assets/images/plocker/image7.png)
 
 ### Additional Support — NAS and ESXi
 
@@ -78,16 +80,17 @@ The PlayBoy Locker offering also includes builds for ESXi and network-attached s
 
 - Simple, single-path encryption.
 
-<!-- Add original Image 8 here: NAS and ESXi build options / capabilities. -->
+![Figure 8: NAS and ESXi build options / capabilities](/assets/images/plocker/image8.png)
 
 Screenshots in the original research show that binary generation can be automated through a web-based builder.
 
-<!-- Add original Image 9 here: web-based PlayBoy Locker builder. -->
+![Figure 9: Web-based PlayBoy Locker builder](/assets/images/plocker/image9.png)
 
 The screenshots also show an active chats panel and administration panels.
 
-<!-- Add original Image 10 here: affiliate chat panel. -->
-<!-- Add original Image 11 here: PlayBoy Locker administration panel. -->
+![Figure 10: Affiliate chat panel](/assets/images/plocker/image10.png)
+
+![Figure 11: PlayBoy Locker administration panel](/assets/images/plocker/image11.png)
 
 ### Binary Analysis
 
@@ -107,8 +110,9 @@ The LDAP scan requires the following parameters:
 - `-u` — username.
 - `-p` — password.
 
-<!-- Add original Image 12 here: LDAP query searching for available machines on the network. -->
-<!-- Add original Image 13 here: strings related to remote service creation. -->
+![Figure 12: LDAP query searching for available machines on the network](/assets/images/plocker/image12.png)
+
+![Figure 13: Strings related to remote service creation](/assets/images/plocker/image13.png)
 
 #### Restart Manager DLL Loading
 
@@ -116,7 +120,7 @@ The LDAP scan requires the following parameters:
 
 The research describes PlayBoy Locker using Restart Manager-related functionality as part of its preparation for encryption. Before encrypting files, the ransomware stops selected processes and services to release files that may otherwise remain locked.
 
-<!-- Add original Image 14 here: list of processes and services targeted by PlayBoy Locker. -->
+![Figure 14: List of processes and services targeted by PlayBoy Locker](/assets/images/plocker/image14.png)
 
 The original report includes a list of targeted processes and services. The text extraction from the archived PDF does not preserve that list reliably, so it has not been reconstructed here.
 
@@ -130,7 +134,7 @@ When PlayBoy Locker initiates shadow-copy deletion, it invokes:
 vssadmin delete shadows /all /quiet
 ```
 
-<!-- Add original Image 15 here: PlayBoy Locker shadow-copy deletion attempt. -->
+![Figure 15: PlayBoy Locker shadow-copy deletion attempt](/assets/images/plocker/image15.png)
 
 #### File Encryption
 
@@ -140,16 +144,19 @@ The original dynamic-analysis observations show multiple threads operating in pa
 
 PlayBoy Locker uses encryption to lock files on connected devices across a network. The report notes that it targets multiple file types, including documents, pictures, videos, and databases. Once encrypted, files cannot be accessed without the decryption key controlled by the attackers.
 
-<!-- Add original Image 16 here: multiple threads observed during dynamic analysis. -->
-<!-- Add original Image 17 here: example of the PDF file encryption process. -->
-<!-- Add original Image 18 here: encrypted files. -->
+![Figure 16: Multiple threads observed during dynamic analysis](/assets/images/plocker/image16.png)
+
+![Figure 17: Example of the PDF file encryption process](/assets/images/plocker/image17.png)
+
+![Figure 18: Encrypted files](/assets/images/plocker/image18.png)
 
 #### Ransom Note
 
 The ransom-note thread extracts and decodes the note embedded in the malware's configuration. It then saves the note as `INSTRUCTIONS.txt` in each directory that is not explicitly excluded from encryption.
 
-<!-- Add original Image 19 here: creation of INSTRUCTIONS.txt. -->
-<!-- Add original Image 20 here: PlayBoy Locker ransom note. -->
+![Figure 19: Creation of INSTRUCTIONS.txt](/assets/images/plocker/image19.png)
+
+![Figure 20: PlayBoy Locker ransom note](/assets/images/plocker/image20.png)
 
 #### Self-Deletion
 
