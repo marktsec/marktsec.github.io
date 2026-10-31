@@ -82,11 +82,11 @@ The PlayBoy Locker offering also includes builds for ESXi and network-attached s
 
 ![Figure 8: NAS and ESXi build options / capabilities](/assets/images/plocker/image8.png)
 
-Screenshots in the original research show that binary generation can be automated through a web-based builder.
+Binary generation can be automated through a web-based builder.
 
 ![Figure 9: Web-based PlayBoy Locker builder](/assets/images/plocker/image9.png)
 
-The screenshots also show an active chats panel and administration panels.
+Active chats panel and administration panels.
 
 ![Figure 10: Affiliate chat panel](/assets/images/plocker/image10.png)
 
@@ -95,8 +95,6 @@ The screenshots also show an active chats panel and administration panels.
 ### Binary Analysis
 
 As with many ransomware incidents, initial access may occur through several vectors, including phishing emails and compromised Remote Desktop Protocol (RDP) endpoints.
-
-The original research analyzes a PlayBoy Locker ransomware sample intended to execute on victim machines.
 
 #### LDAP Scan
 
@@ -118,11 +116,61 @@ The LDAP scan requires the following parameters:
 
 `RstrtMgr.dll` is associated with the Windows Restart Manager, a system component that helps applications and services coordinate restarts when files are in use.
 
-The research describes PlayBoy Locker using Restart Manager-related functionality as part of its preparation for encryption. Before encrypting files, the ransomware stops selected processes and services to release files that may otherwise remain locked.
+PlayBoy Locker using Restart Manager-related functionality as part of its preparation for encryption. Before encrypting files, the ransomware stops selected processes and services to release files that may otherwise remain locked.
 
 ![Figure 14: List of processes and services targeted by PlayBoy Locker](/assets/images/plocker/image14.png)
 
-The original report includes a list of targeted processes and services. The text extraction from the archived PDF does not preserve that list reliably, so it has not been reconstructed here.
+| # | Process / Service |
+|---:|---|
+| 1 | Telegram |
+| 2 | encsvc.exe |
+| 3 | powerpnt.exe |
+| 4 | msedge.exe |
+| 5 | Skype.exe |
+| 6 | firefox.exe |
+| 7 | steam.exe |
+| 8 | sophos |
+| 9 | Chrome.exe |
+| 10 | tbirdconfig.exe |
+| 11 | thebat.exe |
+| 12 | veeam |
+| 13 | sql.exe |
+| 14 | mydesktopqos.exe |
+| 15 | thunderbird.exe |
+| 16 | backup |
+| 17 | Oracle.exe |
+| 18 | ocomm.exe |
+| 19 | visio.exe |
+| 20 | GxVss |
+| 21 | ocssd.exe |
+| 22 | dbeng50.exe |
+| 23 | winword.exe |
+| 24 | GxBlr |
+| 25 | dbsnmp.exe |
+| 26 | sqbcoreservice.exe |
+| 27 | wordpad.exe |
+| 28 | GxFWD |
+| 29 | synctime.exe |
+| 30 | excel.exe |
+| 31 | notepad.exe |
+| 32 | GxCVD |
+| 33 | agntsvc.exe |
+| 34 | infopath.exe |
+| 35 | calc.exe |
+| 36 | GxCIMgr |
+| 37 | isqlplussvc.exe |
+| 38 | msaccess.exe |
+| 39 | wuauclt.exe |
+| 40 | xfssmsp$ |
+| 41 | vccon.exe |
+| 42 | ub.exe |
+| 43 | mydesktopservice.exe |
+| 44 | onenote.exe |
+| 45 | memtas |
+| 46 | ocautoupds.exe |
+| 47 | outlook.exe |
+| 48 | mepocs |
+
 
 #### Shadow Copy Deletion
 
@@ -140,9 +188,9 @@ vssadmin delete shadows /all /quiet
 
 Ransomware often uses multithreading to accelerate file encryption. In this approach, a parent thread identifies files and distributes them to child threads, which encrypt files concurrently.
 
-The original dynamic-analysis observations show multiple threads operating in parallel. This allows PlayBoy Locker to use available system resources to encrypt files more efficiently.
+Dynamic-analysis observations show multiple threads operating in parallel. This allows PlayBoy Locker to use available system resources to encrypt files more efficiently.
 
-PlayBoy Locker uses encryption to lock files on connected devices across a network. The report notes that it targets multiple file types, including documents, pictures, videos, and databases. Once encrypted, files cannot be accessed without the decryption key controlled by the attackers.
+PlayBoy Locker uses encryption to lock files on connected devices across a network. 
 
 ![Figure 16: Multiple threads observed during dynamic analysis](/assets/images/plocker/image16.png)
 
