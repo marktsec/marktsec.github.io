@@ -11,7 +11,9 @@ author: Mark T. (marktsec)
 
 *An analysis of the PlayBoy Locker ransomware-as-a-service (RaaS) operation.*
 
-> **Archive note:** This article was originally published by Cybereason on March 25, 2025. It is republished here for portfolio, research, and educational purposes. The analysis and observations reflect the information available at the time of the original publication. All original rights remain with their respective copyright holders.
+> **Archival notice:** Originally published by Cybereason on June 17, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260414182741/https://www.cybereason.com/blog/threat-analysis-playboy-locker) remains available through the Internet Archive. All rights remain with the original rights holders.
+
+> **Research note:** The analysis and claims below reflect the original publication. Claims made by ransomware operators are presented as claims, not independently verified facts.
 
 ## Key Points
 
