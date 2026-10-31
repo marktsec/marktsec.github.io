@@ -159,16 +159,12 @@ C:\Windows\System32\cmd.exe /C ping 127.0.0.1 -n 2 >nul del /F file name
 
 ## Indicators of Compromise (IOCs)
 
-The original Cybereason research shared the following file hashes associated with PlayBoy Locker Windows encryptors. The PDF contains the second hash twice; it is listed once below.
-
 | SHA-256 | Description |
 |---|---|
 | `3030a048f05146b85c458bcabe97968e5efdd81b224b96c30c83b74365839e7b` | PlayBoy Locker Windows Encryptor |
 | `a9e1bd8f9cbeeec64da558027f380195f7ed572f03830a890dd0494e64d98556` | PlayBoy Locker Windows Encryptor |
 
 ## MITRE ATT&CK Mapping
-
-The original research maps the observed behavior to the following MITRE ATT&CK techniques:
 
 | Tactic | Technique |
 |---|---|
