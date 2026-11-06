@@ -30,8 +30,10 @@ The Beast ransomware group has been active since 2022. In June, the group promot
 Earlier versions of Beast, also known as **Monster**, were developed in Delphi and offered through a Ransomware-as-a-Service (RaaS) model.
 
 ![Figure 1: Invitation to cooperate, advertised in Russian, English, and Chinese](/assets/images/beast/image1.png)
+*Figure 1: Invitation to cooperate, advertised in Russian, English, and Chinese.*
 
 ![Figure 2: First appearance of Beast ransomware on the Russian Anonymous Marketplace](/assets/images/beast/image2.png)
+*Figure 2: First appearance of Beast ransomware on the Russian Anonymous Marketplace.*
 
 ## Technical Analysis
 
@@ -52,8 +54,10 @@ The Windows versions examined in the original research demonstrated the followin
 In August 2024, an offline builder was promoted with options to configure builds for Windows, NAS, and ESXi.
 
 ![Figure 3: Beast Windows binary](/assets/images/beast/image3.png)
+*Figure 3: Beast Windows binary.*
 
 ![Figure 4: New Beast offline builder](/assets/images/beast/image4.png)
+*Figure 4: New Beast offline builder.*
 
 ### Beast Operating System Support — Linux and ESXi
 
@@ -72,6 +76,7 @@ The VMware ESXi version includes additional options:
 - Excluding selected VM IDs from processing.
 
 ![Figure 5: Linux and ESXi version parameters](/assets/images/beast/image5.png)
+*Figure 5: Linux and ESXi version parameters.*
 
 ### Binary Analysis — "BEAST HERE?"
 
@@ -84,6 +89,7 @@ To prevent multiple instances from running simultaneously on the same system, Be
 This mutex helps ensure that only one instance executes at a time.
 
 ![Figure 6: Beast creating a mutex object with the `BEAST HERE?` string](/assets/images/beast/image6.png)
+*Figure 6: Beast creating a mutex object with the `BEAST HERE?` string.*
 
 ### Geographical Exclusion
 
