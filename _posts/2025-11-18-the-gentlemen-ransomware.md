@@ -5,6 +5,7 @@ date: 2025-11-18
 categories: [Ransomware, Threat-Intelligence]
 tags: [TheGentlemen, RaaS, ESXi, ReverseEngineering, MITRE-ATT&CK]
 author: Mark T. (marktsec)
+excerpt: "An in-depth analysis of The Gentlemen, an emerging Ransomware-as-a-Service (RaaS) operation that combines double-extortion tactics with continuously evolving malware capabilities. The research examines the group’s affiliate model, its Windows, Linux, and ESXi locker variants, and technical features including XChaCha20 and Curve25519 encryption, persistence mechanisms, and network propagation through WMI and PowerShell Remoting. It also explores the group’s operational evolution and efforts to expand its impact across enterprise environments."
 ---
 
 
