@@ -5,6 +5,7 @@ date: 2025-06-17
 author: "Mark T. (marktsec) and Evgeny A."
 categories: [threat-intelligence, ransomware]
 tags: [Qilin, RaaS, ransomware, Windows, Linux, ESXi, Nutanix, MITRE ATT&CK]
+excerpt: "An overview of the shifting ransomware ecosystem in 2025, examining the collapse, disruption, and alleged takeovers of major operations including RansomHub, LockBit, Everest, and BlackLock. The research explores Qilin’s rise as a major Ransomware-as-a-Service platform, its affiliate offerings and operational capabilities, and the technical features of its Windows, Linux, and ESXi variants, including encryption methods, network propagation, and VMware infrastructure targeting."
 ---
 
 > **Archival notice:** Originally published by Cybereason on June 17, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260414182741/https://www.cybereason.com/blog/threat-alert-qilin-seizes-control) remains available through the Internet Archive. All rights remain with the original rights holders.
