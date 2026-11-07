@@ -268,7 +268,7 @@ The sample embeds multiple Windows registry references that point to both persis
 
 ## Conclusion
 
-Cybereason’s analysis shows that “The Gentlemen” is a highly adaptive, fast-moving ransomware operation that blends mature ransomware techniques with RaaS features, dual‑extortion, cross‑platform (Windows/Linux/ESXi) lockers, automated persistence, flexible propagation, and affiliate support, allowing it to scale attacks and evade basic defenses quickly. Its rapid victim publication, powerful encryption (XChaCha20/Curve25519), EDR‑evasion tactics and tooling for lateral movement make it a credible and persistent risk to organizations.
+Analysis shows that “The Gentlemen” is a highly adaptive, fast-moving ransomware operation that blends mature ransomware techniques with RaaS features, dual‑extortion, cross‑platform (Windows/Linux/ESXi) lockers, automated persistence, flexible propagation, and affiliate support, allowing it to scale attacks and evade basic defenses quickly. Its rapid victim publication, powerful encryption (XChaCha20/Curve25519), EDR‑evasion tactics and tooling for lateral movement make it a credible and persistent risk to organizations.
 
 ### **Recommendations:**
 
