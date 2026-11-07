@@ -5,6 +5,7 @@ date: 2024-10-18
 categories: [Ransomware, Threat-Intelligence]
 tags: [Beast-Ransomware, RaaS, Windows, Linux, ESXi, SMB, File-Encryption, MITRE-ATT&CK]
 author: Mark T. (marktsec)
+excerpt: "An analysis of Beast ransomware, a multi-platform threat targeting Windows, Linux, and ESXi environments. The research examines its execution flow, service and process termination, SMB-based network discovery, shadow copy deletion, and file-encryption capabilities, highlighting the techniques used to disrupt enterprise environments and maximize operational impact."
 ---
 
 
