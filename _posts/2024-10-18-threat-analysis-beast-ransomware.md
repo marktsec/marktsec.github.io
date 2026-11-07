@@ -21,16 +21,16 @@ author: Mark T. (marktsec)
 - **Expanding marketplace:** The Beast ransomware group offers a range of tools and regularly updates its versions to appeal to a wider audience in the underground cybercrime ecosystem.
 - **Cross-platform targeting:** The Beast RaaS platform provides configurable binaries for Windows, Linux, and VMware ESXi environments.
 - **Customizable builds:** Affiliates can configure ransomware binaries to meet different operational requirements.
-- **Detection and prevention:** The original report describes Cybereason Defense Platform capabilities intended to detect and block ransomware payloads such as Beast before execution.
+
 
 ## Introduction
 
 The Beast ransomware group has been active since 2022. In June, the group promoted a partnership program and new capabilities on underground forums. The group has developed and updated multiple versions to meet market demand.
 
-Earlier versions of Beast, also known as **Monster**, were developed in Delphi and offered through a Ransomware-as-a-Service (RaaS) model.
-
 ![Figure 1: Invitation to cooperate, advertised in Russian, English, and Chinese](/assets/images/beast/image1.png)
 *Figure 1: Invitation to cooperate, advertised in Russian, English, and Chinese.*
+
+Earlier versions of Beast, also known as **Monster**, were developed in Delphi and offered through a Ransomware-as-a-Service (RaaS) model.
 
 ![Figure 2: First appearance of Beast ransomware on the Russian Anonymous Marketplace](/assets/images/beast/image2.png)
 *Figure 2: First appearance of Beast ransomware on the Russian Anonymous Marketplace.*
@@ -39,10 +39,12 @@ Earlier versions of Beast, also known as **Monster**, were developed in Delphi a
 
 ### Beast Operating System Support — Windows
 
-The Windows versions examined in the original research demonstrated the following capabilities:
+The Windows versions examined in the research demonstrated the following capabilities:
 
 - A combination of elliptic-curve cryptography and ChaCha20 encryption.
 - Written in the C programming language.
+  ![Figure 3: Beast Windows binary](/assets/images/beast/image3.png)
+  *Figure 3: Beast Windows binary.*
 - Segmented file encryption.
 - ZIP wrapper mode, in which files are converted on the fly to `.zip` files with the ransom note inside.
 - A multithreaded queue for file encryption.
@@ -52,10 +54,6 @@ The Windows versions examined in the original research demonstrated the followin
 - Subnet scanning.
 
 In August 2024, an offline builder was promoted with options to configure builds for Windows, NAS, and ESXi.
-
-![Figure 3: Beast Windows binary](/assets/images/beast/image3.png)
-*Figure 3: Beast Windows binary.*
-
 ![Figure 4: New Beast offline builder](/assets/images/beast/image4.png)
 *Figure 4: New Beast offline builder.*
 
@@ -95,17 +93,19 @@ This mutex helps ensure that only one instance executes at a time.
 
 Recent Beast version avoids encrypting devices located in CIS countries, including Russia, Belarus, and Moldova.
 
-The malware checks the system's default language settings and country code, and retrieves the target's IP address. If it identifies the device as being in a CIS country, it stops its encryption activity. The original report assesses this as a possible effort to avoid attracting attention or repercussions from authorities in those regions.
+The malware checks the system's default language settings and country code, and retrieves the target's IP address. If it identifies the device as being in a CIS country, it stops its encryption activity. 
 
 The malware uses `iplogger.co` to query the victim's IP address and location.
 
 ![Figure 7: Checking victim IP and location through iplogger.co](/assets/images/beast/image7.png)
+*Figure 7: Checking victim IP and location through iplogger.co.*
 
 ### SMB Scanning
 
 Beast performs SMB scans to search automatically for computers on nearby networks. This is a self-propagation mechanism that can help the payload spread without further user interaction.
 
 ![Figure 8: Beast SMB scanning](/assets/images/beast/image8.png)
+*Figure 8: Beast SMB scanning.*
 
 ### Restart Manager DLL — `RstrtMgr.dll`
 
@@ -113,7 +113,14 @@ The Windows Restart Manager component helps manage applications and services tha
 
 Before encrypting files, the ransomware stops services and processes to unlock files and close them safely.
 
+![Figure 9: Loading RstrtMgr dll.](/assets/images/beast/image9.png)
+
+![Figure 10: Kill services via RstrtMgr dll.](/assets/images/beast/image10.png)
+
 A list of services targeted by Beast.
+![Figure 11: List of targeted services.](/assets/images/beast/image11.png)
+
+![Figure 12: List of targeted services 2.](/assets/images/beast/image12.png)
 
 #### Services targeted by Beast ransomware
 
@@ -195,33 +202,40 @@ When Beast initiates shadow copy deletion, it uses Windows Management Instrument
 
 This behavior is intended to remove shadow copies that could otherwise help a victim restore files.
 
-![Figure 9: Beast querying shadow copies](/assets/images/beast/image9.png)
+![Figure 13: Beast querying shadow copies](/assets/images/beast/image13.png)
+*Figure 13: Beast querying shadow copies.*
 
-![Figure 10: Beast deleting shadow copies](/assets/images/beast/image10.png)
+
+![Figure 14: Beast deleting shadow copies](/assets/images/beast/image14.png)
+*Figure 14: Beast deleting shadow copies.*
 
 ### File Encryption
 
 Beast uses multithreading to accelerate encryption. A parent thread identifies files and distributes them to child threads, which encrypt different files concurrently. This allows the ransomware to use available system resources and process multiple files in parallel.
-
+![Figure 15: Beast ransomware threads demonstrating multithreading](/assets/images/beast/image15.png)
+*Figure 15: Beast ransomware threads demonstrating multithreading.*
 The ransomware targets multiple file types, including documents, pictures, videos, and databases. Once encrypted, files cannot be accessed without the decryption key controlled by the attackers.
 
-![Figure 11: Beast ransomware threads demonstrating multithreading](/assets/images/beast/image11.png)
+![Figure 16: PDF file encryption process example](/assets/images/beast/image16.png)
+*Figure 16: PDF file encryption process example.*
 
-![Figure 12: PDF file encryption process example](/assets/images/beast/image12.png)
-
-![Figure 13: Encrypted files](/assets/images/beast/image13.png)
+![Figure 17: Encrypted files](/assets/images/beast/image17.png)
+*Figure 17: Encrypted files.*
 
 ### Ransom Note
 
 A ransom-note thread extracts and decodes the note embedded in the malware's settings. The note is then written as `README.txt` in each directory that is not excluded from encryption.
 
-![Figure 14: creation of the `README.txt` ransom note](/assets/images/beast/image14.png)
+![Figure 18: creation of the `README.txt` ransom note](/assets/images/beast/image18.png)
+*Figure 18: Creation of the `README.txt` ransom note.*
 
-![Figure 15: Ransom note](/assets/images/beast/image15.png)
+![Figure 19: Ransom note](/assets/images/beast/image19.png)
+*Figure 19: Ransom note.*
 
 The Beast GUI can be displayed during encryption by holding **ALT+CTRL** and typing **666**.
 
-![Figure 16: Beast ransomware GUI](/assets/images/beast/image16.png)
+![Figure 20: Beast ransomware GUI](/assets/images/beast/image20.png)
+*Figure 20: Ransom note.*
 
 ## Indicators of Compromise (IOCs)
 
