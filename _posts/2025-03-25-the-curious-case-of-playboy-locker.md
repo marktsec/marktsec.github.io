@@ -5,6 +5,7 @@ date: 2025-03-25
 categories: [Ransomware, Threat-Intelligence]
 tags: [PlayBoy-Locker, RaaS, Windows, ESXi, NAS, Active-Directory, LDAP, MITRE-ATT&CK]
 author: Mark T. (marktsec)
+excerpt: "An in-depth analysis of PlayBoy Locker ransomware, examining its capabilities across Windows, NAS, and ESXi environments. The research explores its execution flow, LDAP-based network discovery, process and service termination, shadow copy deletion, and file-encryption mechanisms, highlighting how the ransomware attempts to disrupt enterprise infrastructure and prevent recovery."
 ---
 
 # The Curious Case of PlayBoy Locker
