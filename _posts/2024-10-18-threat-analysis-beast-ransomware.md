@@ -9,7 +9,7 @@ excerpt: "An analysis of Beast ransomware, a multi-platform threat targeting Win
 ---
 
 
-> **Archival notice:** Originally published by Cybereason on November 18, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260219162209/https://www.cybereason.com/blog/threat-analysis-beast-ransomware) remains available through the Internet Archive. All rights remain with the original rights holders.
+> **Archival notice:** Originally published by Cybereason on October 18, 2025. This copy is maintained for research and portfolio-archival purposes. The [archived original](https://web.archive.org/web/20260219162209/https://www.cybereason.com/blog/threat-analysis-beast-ransomware) remains available through the Internet Archive. All rights remain with the original rights holders.
 
 > **Research note:** The analysis and claims below reflect the original publication. Claims made by ransomware operators are presented as claims, not independently verified facts.
 >
